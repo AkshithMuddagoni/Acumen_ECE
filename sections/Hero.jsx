@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
+import ParticlesBackground from '../components/ParticlesBackground';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import styles from '../styles';
@@ -12,10 +13,12 @@ const Hero = () => (
   <section 
     /*className={`${styles.yPaddings} h-screen text-center flex flex-col justify-start 
     bg-cover sm:bg-[url('/Acumen_25.png')]`}*/
-  className={`${styles.yPaddings} h-screen text-center flex flex-col justify-start 
+  className={`${styles.yPaddings} h-screen text-center flex flex-col justify-start relative
   bg-[#000029] bg-cover sm:bg-[url('/Acumen_25.png')]`}
 
   >
+    <ParticlesBackground />
+    <div className="absolute inset-0 bg-gradient-to-r from-[#000029] via-transparent to-[#000029] z-0"></div>
     <motion.div
       variants={staggerContainer}
       initial="hidden"
@@ -40,7 +43,7 @@ const Hero = () => (
           />
         </div>
       </div> 
-
+       
       <div className='flex flex-row items-center justify-center mt-2 mb-28 md:flex pr-4'>
         <a
           href="https://events.studenttribe.in/event/67e63e31e5c536d5ced28d72"
@@ -67,6 +70,7 @@ const Hero = () => (
         />
       </div>
     </motion.div>
+    {/*<div className="absolute bottom-0 w-full h-40 bg-gradient-to-b from-transparent to-[#000029]" />*/}
   </section>
 );
 

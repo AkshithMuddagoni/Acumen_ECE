@@ -72,6 +72,7 @@ button {
   filter: blur(125px);
 }
 
+{/*
 .hero-gradient {
   background: linear-gradient(
     97.86deg,
@@ -79,8 +80,8 @@ button {
     #ECBFBF 53.65%,
     #a134c7 100%
   );
-}
-{/*
+}*/}
+
 .hero-gradient {
   background: linear-gradient(
     97.86deg,
@@ -88,7 +89,7 @@ button {
     #008080 50%,
     #3A3335 100%
   );
-} */}
+} 
 
 .gradient-02 {
   position: absolute;
@@ -104,12 +105,13 @@ button {
 .glassmorphism {
   /*background: rgba(255, 255, 255, 0.25);*/
   background: rgba(0, 128, 128, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: 0 8px 32px 0 rgba(0,128,128,0.35);
+  /*box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);*/
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
-
+{/*
 .gradient-03 {
   position: absolute;
   width: 404px;
@@ -120,6 +122,18 @@ button {
   background: rgba(149, 66, 232, 0.35);
   filter: blur(175px);
   transform: rotate(-114.2deg);
+} */}
+
+.gradient-03 {
+  position: absolute;
+  width: 404px;
+  height: 800px;
+  left: 20%;
+  top: 5%;
+
+  background: rgba(0,128,128,0.35);
+  filter: blur(175px);
+  transform: rotate(-114.2deg);
 }
 
 .gradient-04 {
@@ -128,8 +142,8 @@ button {
   height: 100vh;
   left: 30%;
   top: 10%;
-
-  background: rgba(45, 72, 152, 0.75);
+  background: rgba(0,128,128,0.45);
+  /*background: rgba(45, 72, 152, 0.75);*/
   filter: blur(200px);
   transform: rotate(-53.13deg);
 }
@@ -250,8 +264,8 @@ button {
   height: 100vh;
   left: 30%;
   top: 10%;
-
-  background: rgb(184, 15, 74);
+  background: rgb(0,128,128);
+  /*background: rgb(184, 15, 74);*/
   filter: blur(200px);
   transform: rotate(-53.13deg);
 }.gradient-08 {
@@ -260,8 +274,16 @@ button {
   height: 100vh;
   left: 30%;
   top: 10%;
-
-  background: rgb(17, 3, 171);
+  background: rgb(0,0,41);
+  /*background: rgb(17, 3, 171);*/
+ /* filter: blur(200px);*/
   filter: blur(200px);
   transform: rotate(-53.13deg);
+}
+body{
+background:#000029;
+color:#F5F5F5;
+}
+section{
+transition: background 0.4s ease;
 }

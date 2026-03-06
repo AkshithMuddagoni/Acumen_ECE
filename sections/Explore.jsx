@@ -13,7 +13,7 @@ const Explore = () => {
 
   return (
    /* <section className={`${styles.paddings} bg-[#000029] h-100vh`} id="explore">*/
-      <section className={`${styles.paddings} bg-gradient-to-b from-black via-[#000029] to-[#000029]`}>
+      <section className={`${styles.paddings} bg-gradient-to-b from-black via-[#000029] to-[#000029] `}>
       <motion.div
         variants={staggerContainer}
         initial="hidden"
@@ -22,12 +22,13 @@ const Explore = () => {
         className={`${styles.innerWidth} mx-auto flex flex-col`}
       >
 
-        <TitleText
+       {/*<TitleText
           title={<>The Events</>}
          /* textStyles="text-center text-white text-[40px]"*/
-          className="text-white text-4xl font-bold text-center"
-        />
-        <h2 className="text-[#F5F5F5] text-4xl font-bold text-center drop-shadow-[0_0_15px_#008080]">
+          /*className="text-white text-4xl font-bold text-center"
+        /> 
+        */}
+       <h2 className="text-[#F5F5F5] text-4xl font-bold text-center drop-shadow-[0_0_15px_#008080]">
           The Events
         </h2>
         <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
@@ -42,6 +43,7 @@ const Explore = () => {
           ))}
         </div>
       </motion.div>
+      <div className="absolute bottom-0 w-full h-40 bg-gradient-to-b from-transparent to-[#000029]" />
     </section>
   );
 };

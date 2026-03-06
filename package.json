@@ -30,9 +30,11 @@
     "react-scroll": "^1.8.9",
     "react-slick": "^0.29.0",
     "react-slider": "^2.0.4",
+    "react-tsparticles": "^2.12.2",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.9",
-    "swiper": "^11.2.5"
+    "swiper": "^11.2.5",
+    "tsparticles": "^3.9.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

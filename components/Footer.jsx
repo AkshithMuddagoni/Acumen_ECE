@@ -30,8 +30,10 @@ const Footer = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <button className="relative p-[2px] bg-gradient-to-r from-[#ff3bff] to-[#5C24FF] rounded-[32px]">
-                <span className="block bg-black px-6 py-4 text-white text-[16px] font-normal rounded-[30px]">
+              {/*<button className="relative p-[2px] bg-gradient-to-r from-[#ff3bff] to-[#5C24FF] rounded-[32px]">*/}
+              <button className="relative p-[2px] bg-gradient-to-r from-[#008080] to-[#3A3335] rounded-[32px]">
+              {/*<span className="block bg-black px-6 py-4 text-white text-[16px] font-normal rounded-[30px]">*/}
+              <span className="block bg-[#000029] px-6 py-4 text-[#F5F5F5] text-[16px] font-normal rounded-[30px]">
                   Register Here
                 </span>
               </button>
@@ -41,8 +43,8 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col">
-          <div className="mb-[50px] h-[2px] bg-white opacity-10" />
-
+         {/* <div className="mb-[50px] h-[2px] bg-white opacity-10" />*/}
+           <div className="mb-[50px] h-[2px] bg-[#008080] opacity-40" />
           <div className="flex items-center justify-between h-50 flex-wrap gap-4">
 
             <h4 className="w-screen font-extrabold mb-2 text-[24px] text-white">

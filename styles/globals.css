@@ -47,7 +47,7 @@ button {
 }
 
 
-.gradient-01 {
+{/*.gradient-01 {
   background-image: linear-gradient(
     270deg,
     hsl(295deg 76% 51%) 0%,
@@ -57,6 +57,17 @@ button {
     hsl(215deg 77% 81%) 61%,
     hsl(221deg 73% 70%) 74%,
     hsl(220deg 76% 51%) 100%
+  );
+  filter: blur(125px);
+} */}
+
+.gradient-01 {
+  background-image: linear-gradient(
+    270deg,
+    #000029 0%,
+    #3A3335 40%,
+    #008080 70%,
+    #000029 100%
   );
   filter: blur(125px);
 }
@@ -69,6 +80,15 @@ button {
     #a134c7 100%
   );
 }
+{/*
+.hero-gradient {
+  background: linear-gradient(
+    97.86deg,
+    #000029 0%,
+    #008080 50%,
+    #3A3335 100%
+  );
+} */}
 
 .gradient-02 {
   position: absolute;
@@ -76,13 +96,14 @@ button {
   height: 438px;
   top: 0px;
   right: 0px;
-
-  background: #ECBFBF;
+  background: #008080;
+  /*background: #ECBFBF;*/
   filter: blur(190px);
 }
 
 .glassmorphism {
-  background: rgba(255, 255, 255, 0.25);
+  /*background: rgba(255, 255, 255, 0.25);*/
+  background: rgba(0, 128, 128, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -127,8 +148,8 @@ button {
   height: 316px;
   left: 0px;
   top: 0px;
-
-  background: #8d39a3;
+  background: #008080;
+ /* background: #8d39a3;*/
   filter: blur(175px);
 }
 
@@ -138,21 +159,24 @@ button {
   height: 100px;
   left: 37%;
   bottom: 0;
-
-  background: #3c025b;
+  background: #008080;
+  /*background: #3c025b;*/
   filter: blur(150px);
 }
 
 .color1 {
-  background: black;
+  /*background: black;*/
+  background: #000029;
 }
 
 .color2 {
-  background: #301E67;
+  /*background: #301E67;*/
+  background: #3A3335;
 }
 
 .color3 {
-  background: #0e054a;
+  /*background: #0e054a;*/
+  background: #000029;
 }
 
 .color4 {

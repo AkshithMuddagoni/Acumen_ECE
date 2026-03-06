@@ -10,8 +10,11 @@ import { About } from '.';
 
 const Hero = () => (
   <section 
-    className={`${styles.yPaddings} h-screen text-center flex flex-col justify-start 
-    bg-cover sm:bg-[url('/Acumen_25.png')]`}
+    /*className={`${styles.yPaddings} h-screen text-center flex flex-col justify-start 
+    bg-cover sm:bg-[url('/Acumen_25.png')]`}*/
+  className={`${styles.yPaddings} h-screen text-center flex flex-col justify-start 
+  bg-[#000029] bg-cover sm:bg-[url('/Acumen_25.png')]`}
+
   >
     <motion.div
       variants={staggerContainer}
@@ -24,11 +27,16 @@ const Hero = () => (
         <div className="flex flex-col justify-start items-center z-5 mt-10 md:mt-0">
           <TitleText 
             title="ACUMEN ECE" 
-            textStyles="text-center text-[70px] lg:text-[90px] xl:text-[90px] 2xl:text-[90px] font-anta bg-gradient-to-r moving-gradient from-[#ff3bff] via-[#ECBFBF] via-[#5C24FF] to-[#D94FD5] text-transparent bg-clip-text gradient-move"
+             /*textStyles="text-center text-[70px] lg:text-[90px] xl:text-[90px] 2xl:text-[90px] font-anta bg-gradient-to-r moving-gradient from-[#ff3bff] via-[#ECBFBF] via-[#5C24FF] to-[#D94FD5] text-transparent bg-clip-text gradient-move"
+           />*/
+          textStyles="text-center text-[70px] lg:text-[90px] xl:text-[90px] 2xl:text-[90px] font-anta bg-gradient-to-r moving-gradient from-[#008080] via-[#949597] to-[#F5F5F5] text-transparent bg-clip-text gradient-move"
           />
+
           <TitleText 
             title="09-04-2026" 
-            textStyles="text-center text-[40px] lg:text-[60px] xl:text-[60px] 2xl:text-[60px] font-anta moving-gradient bg-gradient-to-r from-[#ff3bff] via-[#ECBFBF] via-[#5C24FF] to-[#D94FD5] text-transparent bg-clip-text gradient-move"
+            /*textStyles="text-center text-[40px] lg:text-[60px] xl:text-[60px] 2xl:text-[60px] font-anta moving-gradient bg-gradient-to-r from-[#ff3bff] via-[#ECBFBF] via-[#5C24FF] to-[#D94FD5] text-transparent bg-clip-text gradient-move"*/
+              textStyles="text-center text-[40px] lg:text-[60px] xl:text-[60px] 2xl:text-[60px] font-anta moving-gradient bg-gradient-to-r from-[#008080] via-[#949597] to-[#F5F5F5] text-transparent bg-clip-text gradient-move"
+
           />
         </div>
       </div> 
@@ -39,8 +47,10 @@ const Hero = () => (
           target="_blank"
           rel="noreferrer"
         >
-          <button className="p-[2px] align-middle bg-gradient-to-r from-[#ff3bff] to-[#5C24FF] rounded-[32px]">
-            <span className="block bg-black px-4 py-4 text-white text-[16px] font-normal rounded-[30px]">
+          {/*<button className="p-[2px] align-middle bg-gradient-to-r from-[#ff3bff] to-[#5C24FF] rounded-[32px]">*/}
+            <button className="p-[2px] align-middle bg-gradient-to-r from-[#008080] to-[#3A3335] rounded-[32px]">
+            {/*<span className="block bg-black px-4 py-4 text-white text-[16px] font-normal rounded-[30px]">*/}
+            <span className="block bg-[#000029] px-4 py-4 text-[#F5F5F5] text-[16px] font-normal rounded-[30px]">
               Register Here
             </span>
           </button>
@@ -52,7 +62,8 @@ const Hero = () => (
         <img 
           src="/Acumen_25.png" 
           alt="Event Banner" 
-          className="h-auto w-auto"
+          /*className="h-auto w-auto"*/
+          className="h-auto w-auto object-cover"
         />
       </div>
     </motion.div>

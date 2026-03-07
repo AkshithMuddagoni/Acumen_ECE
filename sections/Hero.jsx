@@ -14,7 +14,7 @@ const Hero = () => (
     /*className={`${styles.yPaddings} h-screen text-center flex flex-col justify-start 
     bg-cover sm:bg-[url('/Acumen_25.png')]`}*/
   className={`${styles.yPaddings} h-screen text-center flex flex-col justify-start relative
-  bg-[#000029] bg-cover sm:bg-[url('/Acumen_25.png')]`}
+  bg-gradient-to-b from-[#000029] via-[#000029] to-black bg-cover sm:bg-[url('/Acumen_25.png')]`}
 
   >
     <ParticlesBackground />
@@ -71,6 +71,7 @@ const Hero = () => (
       </div>
     </motion.div>
     {/*<div className="absolute bottom-0 w-full h-40 bg-gradient-to-b from-transparent to-[#000029]" />*/}
+    
   </section>
 );
 

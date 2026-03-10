@@ -6,7 +6,7 @@ import { loadFull } from "tsparticles";
 const ParticlesBackground = () => {
 
   const particlesInit = async (main) => {
-    await loadFull(main);
+    
   };
 
   return (

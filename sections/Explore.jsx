@@ -44,7 +44,7 @@ const Explore = () => {
           ))}
         </div>
       </motion.div>
-      <div className="absolute bottom-0 w-full h-40 bg-gradient-to-b from-transparent to-[#000029]" />
+     {/* <div className="absolute bottom-0 w-full h-40 bg-gradient-to-b from-transparent to-[#000029]" />*/}
     </section>
   );
 };

@@ -12,6 +12,7 @@ const Navbar = () => (
     initial="hidden"
     whileInView="show"
     className={`${styles.xPaddings} py-4 relative`}
+    /*className={`${styles.xPaddings} py-4 fixed w-full top-0 bg-[#000029]/90 backdrop-blur-md z-20`}*/
   >
     {/* <div className="absolute w-[50%] inset-0 gradient-01" /> */}
     <div className={`${styles.flexCenter} mx-auto flex gap-4`} style={{"marginTop": "-40px"}}>

@@ -411,31 +411,38 @@ export const socials = [
 // Core Team Members Data
 export const coreTeam = [
   {
-    department: "Overall Coordinators",
+    department: "Overall Coordinator",
     members: [
-      { name: "Swetha", imgUrl: "/swetha.jpg" },
-      { name: "Saikrishna", imgUrl: "/saikrishna.jpg" },
+      /*{ name: "Swetha", imgUrl: "/swetha.jpg" },*/
+      { name: "Armaan", imgUrl: "/Armaan.jpg" },
     ],
   },
   {
     department: "Coordinators for Technical Events",
     members: [
-      { name: "Shivakalyan", imgUrl: "/shivakalyan.jpg" },
+      { name: "Shivakalyan", imgUrl: "/Shivakalyan.jpg" },
       { name: "Karthikeya", imgUrl: "/kartikeya.jpg" },
     ],
   },
   {
     department: "Coordinators for Non-Technical Events",
     members: [
-      { name: "Ananya", imgUrl: "/ananya.jpg" },
-      { name: "Keerthana", imgUrl: "/keerthana.jpg" },
+      { name: "SaiHibah", imgUrl: "/SaiHibah.jpg" },
+      { name: "Varun", imgUrl: "/Varun.jpg" },
     ],
   },
   {
-    department: "HR",
+    department: "Logistics",
     members: [
-      { name: "Gayatri", imgUrl: "/gayatri.jpg" },
-      { name: "Samhitha", imgUrl: "/lakshmisamhitha.jpg" },
+      { name: "Rushikesh", imgUrl: "/rushikesh.jpg" },
+      { name: "Sainadh", imgUrl: "/sainath.jpg" },
+    ],
+  },
+  {
+    department: "Decor",
+    members: [
+      { name: "Harshitha", imgUrl: "/Harshitha.jpg" },
+      { name: "Indrani", imgUrl: "/Indrani.jpg" },
     ],
   },
   {
@@ -473,13 +480,7 @@ export const coreTeam = [
       { name: "Anjali", imgUrl: "/anjali.jpg" },
     ],
   },
-  {
-    department: "Logistics",
-    members: [
-      { name: "Rushikesh", imgUrl: "/rushikesh.jpg" },
-      { name: "Sainadh", imgUrl: "/sainath.jpg" },
-    ],
-  },
+   
   
 ];
 export const devsTeam = [

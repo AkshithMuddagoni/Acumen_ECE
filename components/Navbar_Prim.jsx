@@ -25,7 +25,7 @@ const Navbar = ({ exploreRef }) => {
   };
 
   return (
-    <div className="w-screen h-[80px] z-50 navbar-gradient fixed drop-shadow-lg">
+    <div className="w-screen h-[80px] z-50 navbar-gradient fixed">
       <div className="px-2 flex justify-between items-center w-full h-full">
         {/* ✅ Show VCE Logo only on larger screens */}
         <div className="hidden md:block">

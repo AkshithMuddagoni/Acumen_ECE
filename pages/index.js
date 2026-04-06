@@ -19,6 +19,8 @@ const Page = () => {
 
       <div className="relative">
         <div id="explore-section" className="gradient-03 z-0" ref={exploreRef} />
+        {/* Smooth Top Fade for seamless transition from Hero - Reduced height to not cover heading */}
+        <div className="absolute top-0 w-full h-40 bg-gradient-to-b from-[#000029] to-transparent z-10 pointer-events-none" />
         <Explore />
       </div>
 

@@ -59,8 +59,8 @@ const Hero = ({ setOpen }) => {
         </div>
       </motion.div>
 
-      {/* Smooth Bottom Fade */}
-      <div className="absolute bottom-0 w-full h-64 bg-gradient-to-b from-transparent to-[#000029] z-20"></div>
+      {/* Smooth Bottom Fade - Extended for seamless transition */}
+      <div className="absolute bottom-0 w-full h-96 bg-gradient-to-b from-transparent to-[#000029] z-20"></div>
     </section>
   );
 };

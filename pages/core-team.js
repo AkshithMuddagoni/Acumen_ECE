@@ -23,7 +23,7 @@ const CoreTeam = () => {
   }, []);
 
   return (
-    <div className="bg-primary-black color1 min-h-screen flex flex-col relative overflow-hidden">
+    <div className="bg-transparent min-h-screen flex flex-col relative overflow-hidden">
       {/* ✅ Background Theme */}
       <div className="gradient-03 absolute inset-0 w-full h-full z-0"></div>
 

@@ -123,7 +123,7 @@ const Gallery = () => {
   };
 
   return (
-    <div className="color1 overflow-hidden">
+    <div className="bg-transparent overflow-hidden">
       <Navbar_Prim />
       
       {/* Background with animated gradient */}

@@ -1,18 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
-'use client';
+"use client";
 
-import ParticlesBackground from '../components/ParticlesBackground';
-import { motion } from 'framer-motion';
-import styles from '../styles';
-import { staggerContainer } from '../utils/motion';
-import { TitleText } from '../components';
+import ParticlesBackground from "../components/ParticlesBackground";
+import { motion } from "framer-motion";
+import styles from "../styles";
+import { staggerContainer } from "../utils/motion";
+import { TitleText } from "../components";
 
 const Hero = ({ setOpen }) => {
-
   return (
     <section
       className={`${styles.yPaddings} h-screen text-center flex flex-col justify-start relative
-      bg-gradient-to-b from-[#000029] via-[#000029] to-black bg-cover sm:bg-[url('/Acumen_25.png')]`}
+      bg-transparent bg-cover sm:bg-[url('/Acumen_25.png')]`}
     >
       {/* Background Effects */}
       <ParticlesBackground />
@@ -27,7 +26,6 @@ const Hero = ({ setOpen }) => {
         className={`${styles.innerWidth} mx-auto p-0 flex flex-col justify-start relative z-10`}
       >
         <div className="flex flex-col items-center mt-10">
-          
           <TitleText
             title="ACUMEN ECE"
             textStyles="text-center text-[70px] lg:text-[90px] font-anta bg-gradient-to-r moving-gradient from-[#008080] via-[#949597] to-[#F5F5F5] text-transparent bg-clip-text"

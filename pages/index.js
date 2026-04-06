@@ -9,7 +9,7 @@ const Page = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="bg-primary-black overflow-hidden color1">
+    <div className="bg-transparent overflow-hidden min-h-screen">
 
       <Navbar_Prim exploreRef={exploreRef}/>
       <Navbar />

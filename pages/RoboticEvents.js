@@ -4,7 +4,7 @@ import React from 'react'
 
 const RoboticEvents = () => {
   return (
-    <div className="bg-primary-black overflow-hidden color6">
+    <div className="bg-transparent overflow-hidden">
     <Navbar_Prim />
     <div className="gradient-01 z-0 " />
     <div className="bg-[url('/tech_events.jpeg')] bg-cover bg-opacity-0 text-center h-screen flex flex-col justify-center p-5">

@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ✅ GLOBAL BACKGROUND GRADIENT THEME - CINEMATIC RADIAL */
+html, body {
+  background: radial-gradient(circle at center, #000029 0%, #000014 60%, #000008 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -180,32 +188,32 @@ button {
 
 .color1 {
   /*background: black;*/
-  background: #000029;
+  background: transparent;
 }
 
 .color2 {
   /*background: #301E67;*/
-  background: #3A3335;
+  background: transparent;
 }
 
 .color3 {
   /*background: #0e054a;*/
-  background: #000029;
+  background: transparent;
 }
 
 .color4 {
-  background: #06113C;
+  background: transparent;
 }
 
 .color5 {
-  background: #000000;
+  background: transparent;
 
   background-size: cover;
   
 }
 
 .color6 {
-  background: #000000;
+  background: transparent;
   background-size: cover;
   width:100%;
 
@@ -281,9 +289,60 @@ button {
   transform: rotate(-53.13deg);
 }
 body{
-background:#000029;
 color:#F5F5F5;
 }
 section{
 transition: background 0.4s ease;
+background: transparent;
+}
+
+/* ✅ GLOBAL THEME UTILITY CLASSES */
+.bg-global-gradient {
+  background: linear-gradient(135deg, #000029, #02024a, #0a0033) !important;
+}
+
+.inherit-global-bg {
+  background: transparent !important;
+}
+
+/* ✅ NAVBAR - MATCHES PAGE RADIAL GRADIENT */
+.navbar-gradient {
+  background: radial-gradient(circle at center, #000029 0%, #000014 60%, #000008 100%) !important;
+  background-attachment: fixed;
+}
+
+/* ✅ NAVBAR (NON-FIXED) - RADIAL GRADIENT WITHOUT FIXED ATTACHMENT */
+.navbar-gradient-scroll {
+  background: radial-gradient(circle at center, #000029 0%, #000014 60%, #000008 100%) !important;
+}
+
+/* ✅ HOD CARD - DARK THEME WITH TEAL ACCENTS */
+.hod-card {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 20, 0.9),
+    rgba(0, 150, 130, 0.25)
+  );
+  border: 1px solid rgba(0, 255, 200, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(0, 255, 200, 0.15), 
+              inset 0 0 20px rgba(0, 255, 200, 0.05);
+  transition: all 0.3s ease;
+}
+
+.hod-card:hover {
+  box-shadow: 0 0 40px rgba(0, 255, 200, 0.25), 
+              inset 0 0 30px rgba(0, 255, 200, 0.1);
+  border-color: rgba(0, 255, 200, 0.6);
+}
+
+/* ✅ HOD IMAGE - SUBTLE TEAL GLOW */
+.hod-image {
+  box-shadow: 0 0 20px rgba(0, 255, 200, 0.2);
+  transition: all 0.3s ease;
+}
+
+.hod-image:hover {
+  box-shadow: 0 0 30px rgba(0, 255, 200, 0.35);
 }

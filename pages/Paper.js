@@ -4,7 +4,7 @@ import React from 'react'
 
 const Paper = () => {
   return (
-  <div className="bg-primary-black overflow-hidden">
+  <div className="bg-transparent overflow-hidden">
     <Navbar_Prim />
     <div className="gradient-02 z-0" />
     <Hero2 />

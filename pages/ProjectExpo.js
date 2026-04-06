@@ -4,7 +4,7 @@ import React from 'react'
 
 const ProjectExpo = () => {
   return (
-  <div className="bg-primary-black overflow-hidden color4">
+  <div className="bg-transparent overflow-hidden">
     <Navbar_Prim />
     <div className="gradient-02 z-0" />
     <Hero3 />

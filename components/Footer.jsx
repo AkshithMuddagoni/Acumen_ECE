@@ -1,29 +1,28 @@
 /* eslint-disable */
 /* eslint-disable @next/next/no-img-element */
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { socials } from '../constants';
-import { useRouter } from 'next/router';
+import { motion } from "framer-motion";
+import { socials } from "../constants";
+import { useRouter } from "next/router";
 
-import styles from '../styles';
-import { footerVariants } from '../utils/motion';
+import styles from "../styles";
+import { footerVariants } from "../utils/motion";
 
 const Footer = ({ setOpen }) => {
   const router = useRouter();
-  const isGalleryPage = router.pathname === '/gallery';
+  const isGalleryPage = router.pathname === "/gallery";
 
   return (
     <motion.footer
       variants={footerVariants}
       initial="hidden"
       whileInView="show"
-      className={`${styles.xPaddings} py-8 relative bg-[#000029]`}
+      className={`${styles.xPaddings} py-8 relative bg-transparent`}
     >
       <div className="footer-gradient" />
 
       <div className={`${styles.innerWidth} mx-auto flex flex-col gap-8`}>
-
         {/* ✅ REGISTER BUTTON (GLOBAL MODAL) */}
         <div className="flex items-center justify-center">
           {!isGalleryPage && (
@@ -40,12 +39,10 @@ const Footer = ({ setOpen }) => {
 
         {/* ===== CONTENT ===== */}
         <div className="flex flex-col">
-
           {/* Divider */}
           <div className="mb-[50px] h-[2px] bg-[#008080] opacity-40" />
 
           <div className="flex items-center justify-between flex-wrap gap-6">
-
             {/* Title */}
             <h4 className="w-full font-extrabold text-[24px] text-[#F5F5F5]">
               ACUMEN ECE
@@ -62,8 +59,10 @@ const Footer = ({ setOpen }) => {
             {/* Address */}
             <div className="flex items-center gap-3">
               <p className="text-[#F5F5F5]">
-                <span className="font-bold">Address:-</span><br />
-                Vasavi College of Engineering, Ibrahim Bagh,<br />
+                <span className="font-bold">Address:-</span>
+                <br />
+                Vasavi College of Engineering, Ibrahim Bagh,
+                <br />
                 Hyderabad, Telangana 500031
               </p>
 
@@ -72,11 +71,7 @@ const Footer = ({ setOpen }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  src="/maps.png"
-                  alt="maps"
-                  className="w-[40px] h-[40px]"
-                />
+                <img src="/maps.png" alt="maps" className="w-[40px] h-[40px]" />
               </a>
             </div>
 
@@ -95,13 +90,10 @@ const Footer = ({ setOpen }) => {
                     alt={social.name}
                     className="w-[44px] h-[44px]"
                   />
-                  <span className="text-[#F5F5F5] text-sm">
-                    {social.name}
-                  </span>
+                  <span className="text-[#F5F5F5] text-sm">{social.name}</span>
                 </a>
               ))}
             </div>
-
           </div>
         </div>
       </div>

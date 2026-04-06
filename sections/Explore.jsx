@@ -31,10 +31,10 @@ const Explore = () => {
         /> 
         */}
         {/*<h2 className="text-[#F5F5F5] text-4xl font-bold text-center drop-shadow-[0_0_15px_#008080]">*/}
-        <h2 className="text-[#F5F5F5] text-4xl font-bold text-center drop-shadow-[0_0_15px_#008080]">
+        <h2 className="text-[#F5F5F5] text-2xl sm:text-4xl font-bold text-center drop-shadow-[0_0_8px_#008080] sm:drop-shadow-[0_0_15px_#008080] pb-4 sm:pb-0">
           The Events
         </h2>
-        <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
+        <div className="mt-[30px] sm:mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
           {exploreWorlds.map((world, index) => (
             <ExploreCard
               key={world.id}

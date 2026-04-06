@@ -97,6 +97,16 @@ button {
     #008080 50%,
     #3A3335 100%
   );
+  filter: blur(125px);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  backface-visibility: hidden;
+}
+
+@media (max-width: 640px) {
+  .hero-gradient {
+    filter: blur(30px);
+  }
 } 
 
 .gradient-02 {

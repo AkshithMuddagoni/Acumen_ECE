@@ -1,8 +1,7 @@
-// Gallery data organized by year
-// ✅ Supports Acumen 2025 and previous years (2024, 2023)
-// ✅ 90 total items (75 images + 15 videos)
+// Gallery data - Photos only
+// ✅ 75 photos (WebP optimized)
 
-// WebP images
+// WebP images only (no videos)
 const imageFiles = [
   'Copy of DSC01256.webp',
   'Copy of DSC01269.webp',
@@ -81,70 +80,11 @@ const imageFiles = [
   'PXL_20250410_092545703.MP.webp',
 ];
 
-// MP4 videos
-const videoFiles = [
-  'IMG_4702.mp4',
-  'IMG_4864.mp4',
-  'IMG_4867 (1).mp4',
-  'IMG_4867.mp4',
-  'IMG_4876.mp4',
-  'IMG_4890.mp4',
-  'IMG_4899.mp4',
-  'IMG_4906.mp4',
-  'IMG_4952.mp4',
-  'IMG_5006.mp4',
-  'IMG_5010.mp4',
-  'IMG_5194.mp4',
-  'IMG_5258.mp4',
-  'IMG_5267.mp4',
-  'VID20250407130148.mp4',
-];
-
-// Bento span patterns for visual hierarchy
-const getSpan = (index) => {
-  const patterns = ['md:col-span-1 md:row-span-1', 'md:col-span-2 md:row-span-2', 'md:col-span-1 md:row-span-3', 'md:col-span-2 md:row-span-1'];
-  return patterns[index % patterns.length];
-};
-
-// Generate gallery for 2025
-const GALLERY_2025 = [
-  ...imageFiles.map((name, i) => ({
-    id: `2025-img-${i}`,
-    type: 'image',
-    year: '2025',
-    title: name.replace('.webp', '').replace(/^Copy of /, ''),
-    desc: 'Event photo',
-    url: `/gallery/${name}`,
-    span: getSpan(i),
-  })),
-  ...videoFiles.map((name, i) => ({
-    id: `2025-vid-${i}`,
-    type: 'video',
-    year: '2025',
-    title: name.replace('.mp4', ''),
-    desc: 'Event video',
-    url: `/gallery/${name}`,
-    span: getSpan(imageFiles.length + i),
-  })),
-];
-
-// Previous years galleries (can be populated with archival data)
-const GALLERY_2024 = [];
-const GALLERY_2023 = [];
-
-export const AVAILABLE_YEARS = ['2025', '2024', '2023'];
-
-export const galleryMediaItems = GALLERY_2025;
-
-export const getGalleryByYear = (year) => {
-  switch (year) {
-    case '2025':
-      return GALLERY_2025;
-    case '2024':
-      return GALLERY_2024;
-    case '2023':
-      return GALLERY_2023;
-    default:
-      return GALLERY_2025;
-  }
-};
+// Generate gallery items (photos only)
+export const galleryMediaItems = imageFiles.map((name, i) => ({
+  id: `photo-${i}`,
+  type: 'image',
+  title: name.replace('.webp', '').replace(/^Copy of /, ''),
+  desc: 'Event photo',
+  url: `/gallery/${name}`,
+}));

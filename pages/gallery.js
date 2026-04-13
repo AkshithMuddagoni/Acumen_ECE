@@ -3,7 +3,7 @@ import React from 'react'
 
 const GalleryPage = () => {
   return (
-    <div style={{ width: '100%', minHeight: '100vh', backgroundColor: '#000000' }}>
+    <div style={{ width: '100%', minHeight: '100vh', backgroundColor: '#000000' }} className="pt-20">
       <Gallery />
     </div>
   );

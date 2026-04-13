@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { getCoreTeamMembers, getDevTeamMembers } from "../constants/team-data";
-import Navbar from "../components/Navbar_Prim";
 import { X } from "lucide-react";
 
 const CoreTeam = () => {
@@ -24,8 +23,7 @@ const CoreTeam = () => {
 
   return (
     <div className="w-full bg-black">
-      <Navbar />
-      <div className="w-full min-h-dvh bg-black p-4 md:p-6 pt-24">
+      <div className="w-full min-h-dvh bg-black p-4 md:p-6 pt-32">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold mb-8">Core Team ({allMembers.length} members)</h1>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 md:gap-4 lg:gap-6">
@@ -75,18 +73,20 @@ const CoreTeam = () => {
               className="relative max-w-2xl w-full"
               onClick={(e) => e.stopPropagation()}
             >
-              <button
-                onClick={() => setSelectedMember(null)}
-                className="absolute -top-10 right-0 text-white/80 hover:text-white transition-colors"
-              >
-                <X size={32} />
-              </button>
-              <div className="rounded-xl overflow-hidden">
+              <div className="rounded-xl overflow-hidden relative">
                 <img
                   src={selectedMember.image}
                   alt={selectedMember.name}
                   className="w-full h-auto object-cover"
                 />
+                {/* Close Button - Inside Modal */}
+                <button
+                  onClick={() => setSelectedMember(null)}
+                  className="absolute top-4 right-4 bg-black/60 hover:bg-black/80 text-white rounded-full p-2 transition-all duration-300 hover:scale-110 flex items-center justify-center"
+                  title="Close"
+                >
+                  <X size={28} strokeWidth={3} />
+                </button>
               </div>
               <div className="mt-6 text-center">
                 <h2 className="text-2xl font-bold text-white mb-2">{selectedMember.name}</h2>

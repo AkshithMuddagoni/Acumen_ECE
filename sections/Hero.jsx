@@ -34,10 +34,10 @@ const Hero = ({ onRegisterClick }) => {
         <div className="flex items-center justify-center w-full relative">
           <UnicornScene
             projectId="uJ8kODKLEh5jtBqz3EKW"
-            width={isMobile ? "360px" : "1440px"}
-            height={isMobile ? "450px" : "900px"}
-            scale={isMobile ? 0.5 : 1}
-            dpi={isMobile ? 1 : 1.5}
+            width={isMobile ? "1008px" : "1440px"}
+            height={isMobile ? "630px" : "900px"}
+            scale={isMobile ? 0.7 : 1}
+            dpi={isMobile ? 1.3 : 1.5}
             sdkUrl="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@2.1.6/dist/unicornStudio.umd.js"
           />
           {/* Hide bottom text overlay */}

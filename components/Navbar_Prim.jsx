@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Router from "next/router";
@@ -7,9 +7,23 @@ import { NotchNav } from "./ui/notch-nav";
 
 const Navbar = ({ exploreRef }) => {
   const [nav, setNav] = useState(false);
+  const [socialOpen, setSocialOpen] = useState(false);
+  const socialRef = useRef(null);
   const router = useRouter();
   
   const handleClick = () => setNav(!nav);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (socialRef.current && !socialRef.current.contains(event.target)) {
+        setSocialOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const handleScrollToExplore = () => {
     if (router.isReady && router.pathname === "/") {
@@ -85,6 +99,43 @@ const Navbar = ({ exploreRef }) => {
           />
         </div>
 
+        {/* ✅ Social Dropdown - Right side (desktop only) */}
+        <div className="hidden md:flex flex-shrink-0 relative" ref={socialRef}>
+          <button
+            onClick={() => setSocialOpen(!socialOpen)}
+            className="flex items-center gap-2 px-4 py-2 text-white hover:text-[#00ffaa] transition-colors relative group"
+            title="Follow us on social media"
+          >
+            <span className="text-xl">🔗</span>
+            <span className="text-sm font-medium">Social</span>
+            <span className={`transition-transform ${socialOpen ? 'rotate-180' : ''}`}>▼</span>
+          </button>
+
+          {/* Social Dropdown Menu */}
+          {socialOpen && (
+            <div className="absolute top-full right-0 mt-2 bg-gradient-to-b from-[#1a1a3d] to-[#0f0f25] border border-[#00ffaa]/40 rounded-lg shadow-lg z-50 min-w-[180px] overflow-hidden">
+              <a
+                href="https://www.linkedin.com/company/acumen-ece-vce"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 px-4 py-3 text-white hover:bg-[#00ffaa]/20 transition-colors border-b border-[#00ffaa]/20 font-medium"
+              >
+                <span className="text-lg">💼</span>
+                <span>LinkedIn</span>
+              </a>
+              <a
+                href="https://www.instagram.com/acumen_ece"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 px-4 py-3 text-white hover:bg-[#00ffaa]/20 transition-colors font-medium"
+              >
+                <span className="text-lg">📸</span>
+                <span>Instagram</span>
+              </a>
+            </div>
+          )}
+        </div>
+
         {/* ✅ Acumen Eagle Logo - Right side */}
         <div
           className="cursor-pointer flex-shrink-0 hover:opacity-80 transition-opacity"
@@ -137,7 +188,7 @@ const Navbar = ({ exploreRef }) => {
           👥 Team
         </button>
         <button
-          className="px-4 py-3 text-white text-left hover:bg-[#00ffaa]/10 transition-colors font-medium"
+          className="px-4 py-3 text-white text-left hover:bg-[#00ffaa]/10 transition-colors border-b border-[#00ffaa]/10 font-medium"
           onClick={() => {
             Router.push("/gallery");
             setNav(false);
@@ -145,6 +196,26 @@ const Navbar = ({ exploreRef }) => {
         >
           📸 Gallery
         </button>
+        <div className="border-t border-[#00ffaa]/20">
+          <a
+            href="https://www.linkedin.com/company/acumen-ece-vce"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 px-4 py-3 text-white hover:bg-[#00ffaa]/10 transition-colors border-b border-[#00ffaa]/10 font-medium"
+          >
+            <span className="text-lg">💼</span>
+            <span>LinkedIn</span>
+          </a>
+          <a
+            href="https://www.instagram.com/acumen_ece"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 px-4 py-3 text-white hover:bg-[#00ffaa]/10 transition-colors font-medium"
+          >
+            <span className="text-lg">📸</span>
+            <span>Instagram</span>
+          </a>
+        </div>
       </div>
     </div>
   );

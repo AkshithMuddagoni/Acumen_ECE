@@ -210,24 +210,11 @@ const Explore5 = () => {
                       <span className="text-[#00ffaa]">📍 Venue:</span>
                       <span>Outside JC Bose Block</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-[#00ffaa]">🎟️ Entry:</span>
-                      <span>Free</span>
-                    </div>
                   </div>
                 </div>
 
                 {/* Buttons Container */}
                 <div className="space-y-2 sm:space-y-3">
-                  {/* Rulebook Button */}
-                  <a
-                    href="https://drive.google.com/drive/folders/1B8K9-tgUVZJ0cbEDnvin5yQrt14fyni_"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full block py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg bg-gradient-to-r from-[#ff6b00] to-[#ff8c00] text-white font-black text-sm sm:text-base hover:shadow-[0_0_30px_rgba(255,107,0,0.8)] transition-all transform hover:scale-105 active:scale-95 text-center"
-                  >
-                    📋 View Rulebook
-                  </a>
                   {/* Register Button */}
                   <a
                     href="https://docs.google.com/forms/d/e/1FAIpQLScTDNff49n1LQCitTSIFDPUSABn-FnItnwoSYN8ztqfFeOrbA/viewform"

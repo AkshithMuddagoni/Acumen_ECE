@@ -233,8 +233,8 @@ export const exploreWorlds5 = [
   },
   {
     id: 'world-12',
-    imgUrl: '/mirrormaze.png',
-    Poster: '/mirrormaze.png',
+    imgUrl: '/MirrorMaze.png',
+    Poster: '/MirrorMaze.png',
     title: 'Mirror Maze RC Car',
     subtitle: 'Navigate a mind-bending mirror maze with a camera-equipped RC car! Guide your vehicle through reflections and illusions to escape the ultimate visual challenge.',
     open: false
@@ -249,8 +249,8 @@ export const exploreWorlds5 = [
   },
   {
     id: 'world-14',
-    imgUrl: '/human_akinator.png',
-    Poster: '/human_akinator.png',
+    imgUrl: '/heister_treasure.png',
+    Poster: '/heister_treasure.png',
     title: 'Human Akinator',
     subtitle: 'Can you guess the mystery person before they guess you with clever questions? A mind-bending game of deduction where intuition and psychology collide!',
     open: false

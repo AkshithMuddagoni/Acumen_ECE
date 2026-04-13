@@ -13,14 +13,20 @@ const Navbar = ({ exploreRef }) => {
 
   const handleScrollToExplore = () => {
     if (router.isReady && router.pathname === "/") {
-      exploreRef?.current?.scrollIntoView({ behavior: "smooth" });
+      // Scroll to explore section on home page
+      const exploreSection = document.getElementById("explore-section");
+      if (exploreSection) {
+        exploreSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     } else {
+      // Navigate to home page first, then scroll to explore
       router.push("/").then(() => {
         setTimeout(() => {
-          document
-            .getElementById("explore-section")
-            ?.scrollIntoView({ behavior: "smooth", block: "start" });
-        }, 500);
+          const exploreSection = document.getElementById("explore-section");
+          if (exploreSection) {
+            exploreSection.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        }, 600);
       });
     }
   };

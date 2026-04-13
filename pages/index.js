@@ -21,7 +21,7 @@ const Page = ({ setOpen }) => {
       <div className="relative">
         <div id="explore-section" className="gradient-03 z-0" ref={exploreRef} />
         <div className="absolute top-0 w-full h-40 bg-gradient-to-b from-[#000029] to-transparent z-10 pointer-events-none" />
-        <Explore />
+        <div id="explore-section"><Explore /></div>
       </div>
 
       <Feedback />

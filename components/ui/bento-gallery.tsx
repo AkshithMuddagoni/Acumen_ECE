@@ -24,8 +24,12 @@ const InteractiveImageBentoGallery: React.FC<InteractiveImageBentoGalleryProps> 
 }) => {
   const [selectedItem, setSelectedItem] = useState<ImageItem | null>(null);
 
+  const handleImageClick = React.useCallback((item: ImageItem) => {
+    setSelectedItem(item);
+  }, []);
+
   return (
-    <section className="relative w-full bg-black py-16 sm:py-24">
+    <section className="relative w-full bg-black py-16 sm:py-24 will-change-auto">
       {/* Header */}
       <div className="container mx-auto px-4 text-center mb-12">
         <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">
@@ -40,20 +44,19 @@ const InteractiveImageBentoGallery: React.FC<InteractiveImageBentoGalleryProps> 
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 md:gap-3 lg:gap-4">
           {imageItems.map((item) => (
-            <motion.div
+            <div
               key={item.id}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setSelectedItem(item)}
-              className="aspect-square cursor-pointer overflow-hidden rounded-lg bg-gray-900 shadow-md transition-all duration-300 hover:shadow-xl"
+              onClick={() => handleImageClick(item)}
+              className="aspect-square cursor-pointer overflow-hidden rounded-lg bg-gray-900 shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105 active:scale-95"
             >
               <img
                 src={item.url}
                 alt={item.title}
-                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                className="h-full w-full object-cover transition-transform duration-300 will-change-transform"
                 loading="lazy"
+                decoding="async"
               />
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

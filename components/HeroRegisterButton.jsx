@@ -185,27 +185,45 @@ export const HeroRegisterButton = ({ onRegisterClick }) => {
     );
   }
 
-  // Desktop with cursor tracking beams
+  // Desktop with cursor tracking beams - GPU optimized
   return (
-    <div className="flex flex-col gap-6 items-center justify-center">
-      <PulseBeams
-        beams={beams}
-        gradientColors={gradientColors}
-        className="bg-transparent h-auto py-4"
-        width={858}
-        height={434}
-      >
-        <button 
-          onClick={onRegisterClick}
-          className="z-40 no-underline group cursor-pointer relative shadow-2xl shadow-cyan-500/50 rounded-2xl p-px text-lg font-semibold leading-6 text-white inline-block transition-all duration-300 hover:shadow-[0_0_40px_rgba(0,240,255,0.8)] w-64 h-16"
+    <div className="flex flex-col gap-6 items-center justify-center will-change-transform" style={{ transform: 'translate3d(0, 0, 0)' }}>
+      <style jsx>{`
+        .hero-pulse-beams {
+          transform: translate3d(0, 0, 0);
+          will-change: contents;
+          backface-visibility: hidden;
+        }
+        .hero-button {
+          transform: translate3d(0, 0, 0);
+          will-change: box-shadow, transform;
+          backface-visibility: hidden;
+          -webkit-font-smoothing: antialiased;
+        }
+        .hero-button:hover {
+          will-change: box-shadow, transform;
+        }
+      `}</style>
+      <div className="hero-pulse-beams">
+        <PulseBeams
+          beams={beams}
+          gradientColors={gradientColors}
+          className="bg-transparent h-auto py-4"
+          width={858}
+          height={434}
         >
-          <div className="relative flex justify-center w-full text-center h-full items-center z-10 rounded-2xl bg-slate-900 py-0.5 px-6 ring-1 ring-cyan-400/70 group-hover:ring-cyan-300/100">
-            <span className="text-3xl md:text-4xl font-big-heading font-bold text-white tracking-wider drop-shadow-lg">
-              REGISTER
-            </span>
-          </div>
-        </button>
-      </PulseBeams>
+          <button 
+            onClick={onRegisterClick}
+            className="hero-button z-40 no-underline group cursor-pointer relative shadow-2xl shadow-cyan-500/50 rounded-2xl p-px text-lg font-semibold leading-6 text-white inline-block transition-all duration-300 hover:shadow-[0_0_40px_rgba(0,240,255,0.8)] w-64 h-16"
+          >
+            <div className="relative flex justify-center w-full text-center h-full items-center z-10 rounded-2xl bg-slate-900 py-0.5 px-6 ring-1 ring-cyan-400/70 group-hover:ring-cyan-300/100">
+              <span className="text-3xl md:text-4xl font-big-heading font-bold text-white tracking-wider drop-shadow-lg">
+                REGISTER
+              </span>
+            </div>
+          </button>
+        </PulseBeams>
+      </div>
     </div>
   );
 };

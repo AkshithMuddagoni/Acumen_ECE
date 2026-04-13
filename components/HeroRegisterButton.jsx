@@ -1,5 +1,6 @@
 "use client";
 
+import React from 'react';
 import { PulseBeams } from './ui/pulse-beams';
 
 const beams = [
@@ -157,9 +158,36 @@ const gradientColors = {
 };
 
 export const HeroRegisterButton = ({ onRegisterClick }) => {
+  const [isMobile, setIsMobile] = React.useState(false);
+  
+  React.useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Simple mobile button
+  if (isMobile) {
+    return (
+      <div className="flex flex-col gap-4 items-center justify-center">
+        <button 
+          onClick={onRegisterClick}
+          className="z-40 no-underline group cursor-pointer relative shadow-2xl shadow-cyan-500/50 rounded-2xl p-px text-lg font-semibold leading-6 text-white inline-block transition-all duration-300 active:shadow-[0_0_20px_rgba(0,240,255,0.6)] w-56 h-14"
+        >
+          <div className="relative flex justify-center w-full text-center h-full items-center z-10 rounded-2xl bg-slate-900 py-0.5 px-4 ring-1 ring-cyan-400/70 group-active:ring-cyan-300/100 active:scale-95 transition-transform">
+            <span className="text-2xl font-big-heading font-bold text-white tracking-wider drop-shadow-lg">
+              REGISTER
+            </span>
+          </div>
+        </button>
+      </div>
+    );
+  }
+
+  // Desktop with cursor tracking beams
   return (
-    <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-center">
-      {/* Register Now Button */}
+    <div className="flex flex-col gap-6 items-center justify-center">
       <PulseBeams
         beams={beams}
         gradientColors={gradientColors}
@@ -169,10 +197,10 @@ export const HeroRegisterButton = ({ onRegisterClick }) => {
       >
         <button 
           onClick={onRegisterClick}
-          className="z-40 no-underline group cursor-pointer relative shadow-2xl shadow-cyan-500/50 rounded-2xl p-px text-lg font-semibold leading-6 text-white inline-block transition-all duration-300 hover:shadow-[0_0_40px_rgba(0,240,255,0.8)] w-56 sm:w-64 h-14 sm:h-16"
+          className="z-40 no-underline group cursor-pointer relative shadow-2xl shadow-cyan-500/50 rounded-2xl p-px text-lg font-semibold leading-6 text-white inline-block transition-all duration-300 hover:shadow-[0_0_40px_rgba(0,240,255,0.8)] w-64 h-16"
         >
-          <div className="relative flex justify-center w-full text-center h-full items-center z-10 rounded-2xl bg-slate-900 py-0.5 px-4 sm:px-6 ring-1 ring-cyan-400/70 group-hover:ring-cyan-300/100">
-            <span className="text-2xl sm:text-3xl md:text-4xl font-big-heading font-bold text-white tracking-wider drop-shadow-lg">
+          <div className="relative flex justify-center w-full text-center h-full items-center z-10 rounded-2xl bg-slate-900 py-0.5 px-6 ring-1 ring-cyan-400/70 group-hover:ring-cyan-300/100">
+            <span className="text-3xl md:text-4xl font-big-heading font-bold text-white tracking-wider drop-shadow-lg">
               REGISTER
             </span>
           </div>

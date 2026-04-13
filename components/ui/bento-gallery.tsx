@@ -28,6 +28,11 @@ const InteractiveImageBentoGallery: React.FC<InteractiveImageBentoGalleryProps> 
     setSelectedItem(item);
   }, []);
 
+  const handleTouchEnd = React.useCallback((e: React.TouchEvent, item: ImageItem) => {
+    e.preventDefault();
+    handleImageClick(item);
+  }, [handleImageClick]);
+
   return (
     <section className="relative w-full bg-black py-16 sm:py-24 will-change-auto">
       {/* Header */}
@@ -47,7 +52,10 @@ const InteractiveImageBentoGallery: React.FC<InteractiveImageBentoGalleryProps> 
             <div
               key={item.id}
               onClick={() => handleImageClick(item)}
-              className="aspect-square cursor-pointer overflow-hidden rounded-lg bg-gray-900 shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105 active:scale-95"
+              onTouchEnd={(e) => handleTouchEnd(e, item)}
+              className="aspect-square cursor-pointer overflow-hidden rounded-lg bg-gray-900 shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105 active:scale-95 touch-none"
+              role="button"
+              tabIndex={0}
             >
               <img
                 src={item.url}
@@ -61,7 +69,7 @@ const InteractiveImageBentoGallery: React.FC<InteractiveImageBentoGalleryProps> 
         </div>
       </div>
 
-      {/* Modal */}
+      {/* Modal - Optimized for Mobile */}
       <AnimatePresence>
         {selectedItem && (
           <motion.div
@@ -70,6 +78,7 @@ const InteractiveImageBentoGallery: React.FC<InteractiveImageBentoGalleryProps> 
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
             onClick={() => setSelectedItem(null)}
+            onTouchEnd={() => setSelectedItem(null)}
           >
             <motion.div
               initial={{ scale: 0.9, y: 20 }}
@@ -77,6 +86,7 @@ const InteractiveImageBentoGallery: React.FC<InteractiveImageBentoGalleryProps> 
               exit={{ scale: 0.9, y: 20 }}
               className="relative w-full max-w-4xl"
               onClick={(e) => e.stopPropagation()}
+              onTouchEnd={(e) => e.stopPropagation()}
             >
               <img
                 src={selectedItem.url}
@@ -85,7 +95,8 @@ const InteractiveImageBentoGallery: React.FC<InteractiveImageBentoGalleryProps> 
               />
               <button
                 onClick={() => setSelectedItem(null)}
-                className="absolute top-4 right-4 bg-black/60 hover:bg-black/80 text-white rounded-full p-2 transition-all hover:scale-110"
+                onTouchEnd={() => setSelectedItem(null)}
+                className="absolute top-4 right-4 bg-black/60 hover:bg-black/80 text-white rounded-full p-2 transition-all hover:scale-110 touch-manipulation"
               >
                 <X size={28} strokeWidth={3} />
               </button>

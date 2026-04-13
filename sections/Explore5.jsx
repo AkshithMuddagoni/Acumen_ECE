@@ -76,7 +76,7 @@ const Explore5 = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="relative w-full h-80 sm:h-96 md:h-[480px] lg:h-[600px] rounded-2xl sm:rounded-3xl overflow-hidden bg-gradient-to-b from-[#1a1a3d] to-[#0f0f25] border-2 border-[#00ffaa]/30 shadow-2xl shadow-[#00ffaa]/20 hover:border-[#00ffaa]/50 hover:shadow-[#00ffaa]/30 transition-all duration-300 active:scale-98 cursor-grab active:cursor-grabbing"
+            className="relative w-full h-80 sm:h-96 md:h-[480px] lg:h-[600px] rounded-2xl sm:rounded-3xl overflow-hidden bg-gradient-to-b from-[#1a1a3d] to-[#0f0f25] border-2 border-[#00ffaa]/30 shadow-2xl shadow-[#00ffaa]/20 hover:border-[#00ffaa]/50 hover:shadow-[#00ffaa]/30 transition-all duration-300 active:scale-98 cursor-grab active:cursor-grabbing touch-pan-y"
             onMouseDown={handleMouseDown}
             onMouseUp={handleMouseUp}
             onTouchStart={handleMouseDown}
@@ -95,8 +95,24 @@ const Explore5 = () => {
             
             {/* Scroll Hint */}
             <div className="absolute bottom-3 sm:bottom-6 left-1/2 transform -translate-x-1/2 text-[#00ffaa]/70 text-xs sm:text-sm font-bold pointer-events-none animate-pulse z-10">
-              <span className="block text-center">↔️ Drag to Scroll • Click to View</span>
+              <span className="block text-center hidden sm:block">↔️ Drag to Scroll • Click to View</span>
+              <span className="block text-center sm:hidden">👆 Tap to Select</span>
             </div>
+          </motion.div>
+
+          {/* Mobile Register Button - Visible on mobile only */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="sm:hidden w-full mt-6 px-4"
+          >
+            <button
+              onClick={() => setSelectedEvent(exploreWorlds5[currentIndex])}
+              className="w-full py-3 px-6 rounded-lg bg-gradient-to-r from-[#00ffaa] to-[#00cc88] text-[#000029] font-black text-base hover:shadow-[0_0_30px_rgba(0,255,170,0.8)] transition-all transform active:scale-95 text-center"
+            >
+              📌 Select "{exploreWorlds5[currentIndex]?.title}"
+            </button>
           </motion.div>
 
           {/* Event Thumbnail Selector */}

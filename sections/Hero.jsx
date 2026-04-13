@@ -1,9 +1,20 @@
 "use client";
 
+import React from "react";
 import UnicornScene from "unicornstudio-react";
 import { HeroRegisterButton } from "../components";
 
 const Hero = ({ onRegisterClick }) => {
+  // Detect mobile for responsive dimensions
+  const [isMobile, setIsMobile] = React.useState(false);
+  
+  React.useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <section className="relative min-h-[100svh] overflow-hidden bg-transparent flex flex-col items-center justify-center">
       <style jsx global>{`
@@ -19,14 +30,14 @@ const Hero = ({ onRegisterClick }) => {
       {/* Hero Content Container */}
       <div className="flex flex-col items-center justify-center w-full flex-grow">
 
-        {/* Unicorn Scene */}
+        {/* Unicorn Scene - Optimized for Mobile */}
         <div className="flex items-center justify-center w-full relative">
           <UnicornScene
             projectId="uJ8kODKLEh5jtBqz3EKW"
-            width="1440px"
-            height="900px"
-            scale={1}
-            dpi={1.5}
+            width={isMobile ? "360px" : "1440px"}
+            height={isMobile ? "450px" : "900px"}
+            scale={isMobile ? 0.5 : 1}
+            dpi={isMobile ? 1 : 1.5}
             sdkUrl="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@2.1.6/dist/unicornStudio.umd.js"
           />
           {/* Hide bottom text overlay */}

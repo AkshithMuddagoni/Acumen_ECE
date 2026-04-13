@@ -225,8 +225,8 @@ export const exploreWorlds5 = [
   },
   {
     id: 'world-11',
-    imgUrl: '/Liars Deck.png',
-    Poster: '/Liars Deck.png',
+    imgUrl: '/liars_deck.jpeg',
+    Poster: '/liars_deck.jpeg',
     title: 'Liars Deck',
     subtitle: 'Bluff your way to victory in this thrilling card game of deception and strategy! Can you spot the liars or will you fall for their clever tricks?',
     open: false
@@ -249,8 +249,8 @@ export const exploreWorlds5 = [
   },
   {
     id: 'world-14',
-    imgUrl: '/heister_treasure.png',
-    Poster: '/heister_treasure.png',
+    imgUrl: '/human_akinator_real.png',
+    Poster: '/human_akinator_real.png',
     title: 'Human Akinator',
     subtitle: 'Can you guess the mystery person before they guess you with clever questions? A mind-bending game of deduction where intuition and psychology collide!',
     open: false

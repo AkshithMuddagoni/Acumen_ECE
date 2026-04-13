@@ -168,6 +168,135 @@ export const VectorPad: React.FC<VectorPadProps> = ({
     nonTechGlow: nonTechColors.glow
   }), [isTechnical, isNonTechnical, isConfirmed]);
 
+  // Mobile: Simple button interface
+  if (isMobile) {
+    return (
+      <div className="fixed inset-0 w-full h-full bg-black/90 flex flex-col items-center justify-center z-50 overflow-hidden backdrop-blur-sm">
+        {/* Animated Background Grid */}
+        <div className="absolute inset-0 opacity-5 pointer-events-none"
+          style={{
+            backgroundImage: "linear-gradient(0deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)",
+            backgroundSize: "40px 40px"
+          }}
+        />
+
+        <div className="relative z-10 w-full px-6 flex flex-col items-center justify-center gap-8 py-8">
+          {/* Header */}
+          <motion.div 
+            className="text-center"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <h1 className="text-4xl font-black tracking-[0.15em] drop-shadow-lg" 
+              style={{ 
+                fontFamily: "'ComputerRegular', monospace",
+                background: "linear-gradient(90deg, #7B2CBF 0%, #FF8C00 100%)",
+                backgroundClip: "text",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                textShadow: "0 0 25px rgba(123, 44, 191, 0.4)"
+              }}>
+              SELECT EVENT
+            </h1>
+            <p className="text-xs text-gray-400 mt-2 tracking-wider">Choose your preferred event category</p>
+          </motion.div>
+
+          {/* Button Container */}
+          <div className="w-full max-w-sm flex flex-col gap-6">
+            {/* Technical Button */}
+            <motion.button
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={onSelectTechnical}
+              className="w-full py-6 px-6 rounded-lg font-bold text-lg tracking-widest uppercase transition-all duration-300"
+              style={{
+                fontFamily: "'ComputerRegular', monospace",
+                background: "linear-gradient(135deg, rgba(123, 44, 191, 0.3) 0%, rgba(90, 25, 154, 0.2) 100%)",
+                border: "2px solid #7B2CBF",
+                color: "#C77DFF",
+                boxShadow: "0 0 20px rgba(123, 44, 191, 0.4), inset 0 0 20px rgba(123, 44, 191, 0.1)"
+              }}
+              onMouseEnter={(e) => {
+                if (window.innerWidth >= 768) {
+                  e.currentTarget.style.boxShadow = "0 0 40px rgba(123, 44, 191, 0.6), inset 0 0 30px rgba(123, 44, 191, 0.2)";
+                  e.currentTarget.style.borderColor = "#9D4EDD";
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (window.innerWidth >= 768) {
+                  e.currentTarget.style.boxShadow = "0 0 20px rgba(123, 44, 191, 0.4), inset 0 0 20px rgba(123, 44, 191, 0.1)";
+                  e.currentTarget.style.borderColor = "#7B2CBF";
+                }
+              }}
+            >
+              <div className="flex items-center justify-center gap-3">
+                <span className="text-2xl">⚙️</span>
+                <span>TECHNICAL</span>
+              </div>
+              <p className="text-xs text-gray-300 mt-2 font-normal tracking-normal">Click to register for technical events</p>
+            </motion.button>
+
+            {/* Non-Technical Button */}
+            <motion.button
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={onSelectNonTechnical}
+              className="w-full py-6 px-6 rounded-lg font-bold text-lg tracking-widest uppercase transition-all duration-300"
+              style={{
+                fontFamily: "'ComputerRegular', monospace",
+                background: "linear-gradient(135deg, rgba(255, 140, 0, 0.3) 0%, rgba(255, 115, 0, 0.2) 100%)",
+                border: "2px solid #FF8C00",
+                color: "#FFA500",
+                boxShadow: "0 0 20px rgba(255, 140, 0, 0.4), inset 0 0 20px rgba(255, 140, 0, 0.1)"
+              }}
+              onMouseEnter={(e) => {
+                if (window.innerWidth >= 768) {
+                  e.currentTarget.style.boxShadow = "0 0 40px rgba(255, 140, 0, 0.6), inset 0 0 30px rgba(255, 140, 0, 0.2)";
+                  e.currentTarget.style.borderColor = "#FF9E1B";
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (window.innerWidth >= 768) {
+                  e.currentTarget.style.boxShadow = "0 0 20px rgba(255, 140, 0, 0.4), inset 0 0 20px rgba(255, 140, 0, 0.1)";
+                  e.currentTarget.style.borderColor = "#FF8C00";
+                }
+              }}
+            >
+              <div className="flex items-center justify-center gap-3">
+                <span className="text-2xl">🎭</span>
+                <span>NON-TECH</span>
+              </div>
+              <p className="text-xs text-gray-300 mt-2 font-normal tracking-normal">Click to register for non-tech events</p>
+            </motion.button>
+          </div>
+
+          {/* Close Button */}
+          <motion.button
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            onClick={onClose}
+            className="text-sm font-bold tracking-widest transition-all uppercase px-6 py-2 rounded-lg border" 
+            style={{ 
+              fontFamily: "'ComputerRegular', monospace",
+              color: "#888",
+              borderColor: "rgba(136, 136, 136, 0.4)"
+            }}
+          >
+            CLOSE [ESC]
+          </motion.button>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="fixed inset-0 w-full h-full bg-black flex flex-col items-center justify-center z-50 overflow-hidden">
       {/* Animated Background Grid */}

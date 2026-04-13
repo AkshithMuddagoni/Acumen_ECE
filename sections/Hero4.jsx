@@ -79,7 +79,7 @@ const Hero4 = () => {
         >
           <div className="flex justify-center items-center flex-col relative py-8">
             <TitleText
-              title="Technical Events - Acumen 2025"
+              title="Technical Events"
               textStyles="text-center text-[50px] md:text-[65px] lg:text-[75px] font-anta bg-gradient-to-r from-white to-gray-300 text-transparent bg-clip-text font-bold drop-shadow-lg gradient-move"
             />
           </div>

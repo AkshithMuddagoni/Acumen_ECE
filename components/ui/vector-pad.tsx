@@ -19,12 +19,21 @@ export const VectorPad: React.FC<VectorPadProps> = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const holdTimerRef = useRef<NodeJS.Timeout | null>(null);
   const holdStartTimeRef = useRef<number>(0);
+  const [isMobile, setIsMobile] = React.useState(false);
   
   const [isActive, setIsActive] = useState(false);
   const [isHolding, setIsHolding] = useState(false);
   const [holdProgress, setHoldProgress] = useState(0);
   const [cursorPos, setCursorPos] = useState({ x: 50, y: 50 });
   const [selectedSide, setSelectedSide] = useState<"technical" | "non-technical" | null>(null);
+
+  // Mobile detection
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const handlePointerMove = useCallback((e: React.PointerEvent) => {
     if (!containerRef.current || isHolding) return;
@@ -45,7 +54,19 @@ export const VectorPad: React.FC<VectorPadProps> = ({
     setIsHolding(true);
     setHoldProgress(0);
 
-    // Lightweight hold timer with progress updates
+    // On mobile: trigger immediately
+    if (isMobile) {
+      setHoldProgress(1);
+      if (selectedSide === "technical") {
+        onSelectTechnical?.();
+      } else if (selectedSide === "non-technical") {
+        onSelectNonTechnical?.();
+      }
+      setIsHolding(false);
+      return;
+    }
+
+    // On desktop: Lightweight hold timer with progress updates
     const holdStartTime = Date.now();
     const updateProgress = () => {
       const elapsed = Date.now() - holdStartTime;
@@ -58,12 +79,19 @@ export const VectorPad: React.FC<VectorPadProps> = ({
     };
     
     holdTimerRef.current = setTimeout(updateProgress, 16);
-  }, []);
+  }, [isMobile, selectedSide, onSelectTechnical, onSelectNonTechnical]);
 
   const handlePointerUp = useCallback(() => {
     if (holdTimerRef.current) {
       clearTimeout(holdTimerRef.current);
       holdTimerRef.current = null;
+    }
+
+    // On mobile: already handled in handlePointerDown
+    if (isMobile) {
+      setIsHolding(false);
+      setHoldProgress(0);
+      return;
     }
 
     const holdDuration = Date.now() - holdStartTimeRef.current;
@@ -79,7 +107,7 @@ export const VectorPad: React.FC<VectorPadProps> = ({
     
     setIsHolding(false);
     setHoldProgress(0);
-  }, [selectedSide, onSelectTechnical, onSelectNonTechnical]);
+  }, [isMobile, selectedSide, onSelectTechnical, onSelectNonTechnical]);
 
   const handlePointerLeave = useCallback(() => {
     if (holdTimerRef.current) {
@@ -193,7 +221,11 @@ export const VectorPad: React.FC<VectorPadProps> = ({
             }}
             transition={{ duration: 0.2 }}
           >
-            {isActive ? (isConfirmed ? "✓ CONFIRMED" : isHolding ? "⚡ PRESSING..." : "📍 TRACKING") : "🔍 HOVER TO START"}
+            {isMobile ? (
+              isActive ? (isConfirmed ? "✓ CONFIRMED" : "👆 READY TO TAP") : "👆 TAP TO SELECT"
+            ) : (
+              isActive ? (isConfirmed ? "✓ CONFIRMED" : isHolding ? "⚡ PRESSING..." : "📍 TRACKING") : "🔍 HOVER TO START"
+            )}
           </motion.div>
         </motion.div>
 
@@ -250,7 +282,7 @@ export const VectorPad: React.FC<VectorPadProps> = ({
                 }}
                 transition={{ duration: 0.2 }}
               >
-                {isConfirmed && isTechnical ? "✓ SELECTED" : isHolding && isTechnical ? "← HOLD" : "← PRESS"}
+                {isConfirmed && isTechnical ? "✓ SELECTED" : isMobile ? "← TAP" : isHolding && isTechnical ? "← HOLD" : "← PRESS"}
               </motion.div>
               {/* Hold Progress Bar */}
               {isTechnical && isHolding && (
@@ -291,7 +323,7 @@ export const VectorPad: React.FC<VectorPadProps> = ({
                 }}
                 transition={{ duration: 0.2 }}
               >
-                {isConfirmed && isNonTechnical ? "✓ SELECTED" : isHolding && isNonTechnical ? "HOLD →" : "PRESS →"}
+                {isConfirmed && isNonTechnical ? "✓ SELECTED" : isMobile ? "TAP →" : isHolding && isNonTechnical ? "HOLD →" : "PRESS →"}
               </motion.div>
               {/* Hold Progress Bar */}
               {isNonTechnical && isHolding && (

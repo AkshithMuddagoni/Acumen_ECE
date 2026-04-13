@@ -225,8 +225,8 @@ export const exploreWorlds5 = [
   },
   {
     id: 'world-11',
-    imgUrl: '/liars_deck.jpeg',
-    Poster: '/liars_deck.jpeg',
+    imgUrl: '/liars Deck.png',
+    Poster: '/liars Deck.png',
     title: 'Liars Deck',
     subtitle: 'Bluff your way to victory in this thrilling card game of deception and strategy! Can you spot the liars or will you fall for their clever tricks?',
     open: false

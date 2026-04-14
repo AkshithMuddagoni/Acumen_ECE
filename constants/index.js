@@ -40,228 +40,329 @@ export const exploreWorlds = [
 export const exploreWorlds4 = [
   {
     id: 'world-1',
-    
-    imgUrl:'/rc_racing.jpeg',
-    //imgUrl: '/RE-5.jpg',
-    Poster: '/rc_racing.jpeg',
-    title: 'RC Racing',
-    subtitle: "Control high-speed RC cars in thrilling racing competition! Navigate through challenging tracks and compete against fellow teams in speed and precision. Experience the adrenaline rush of autonomous robotics racing!",
+    imgUrl:'/rocket_league.jpeg',
+    Poster: '/rocket_league.jpeg',
+    title: 'Rocket League',
+    subtitle: 'Challenge your engineering and coding abilities in Robo Soccer Clash, where intelligence meets agility.',
+    description: 'Build a robot that can compete in an intense soccer battle against other bots in a fast-paced arena. Demonstrate accuracy, control, and smart tactics as your robot passes, defends, and scores.',
+    eventType: 'Team Event',
+    teamSize: '2-5 members',
+    entryFee: '₹400',
+    prizeDetail: '🥇 1st: ₹4000 | 🥈 2nd: ₹2000',
     open:false
-    // pageUrl: '/Poster'
   },
   {
     id: 'world-2',
-    imgUrl:'/rocket_league.jpeg',
-    //imgUrl: '/RE-1.png',
-    Poster: '/rocket_league.jpeg',
-    title: 'Rocket League',
-    subtitle: 'A thrilling collision-based soccer game with rocket-powered robots! Maneuver your bot to hit the ball and score against opposing teams. High-speed action, perfect teamwork, and strategic gameplay await!',
+    imgUrl:'/clash_of_torque.jpeg',
+    Poster: '/clash_of_torque.jpeg',
+    title: 'Clash of Torque',
+    subtitle: 'Push your innovation and mechanical design skills to the limit, where raw power meets smart engineering.',
+    description: 'Create a robot built to dominate the arena by driving, resisting, and outmaneuvering rival bots. Exhibit force, stability, and strategic control in high-intensity face-offs. Victory belongs to the machine that combines strength with precision and refuses to be pushed back!',
+    eventType: 'Team Event',
+    teamSize: '2-5 members',
+    entryFee: '₹400',
+    prizeDetail: '🥇 1st: ₹4000 | 🥈 2nd: ₹2000',
     open:false
-    // pageUrl: '/InspireAndIgnite'
   },
   {
     id: 'world-3',
-    imgUrl:'/clash_of_torque.jpeg',
-    //imgUrl: '/RE-3.png',
-    Poster: '/clash_of_torque.jpeg',
-    title: 'Clash of Torque',
-    subtitle: 'Witness the ultimate robot sumo wrestling battle! Two powerful robots push and shove to dominate the arena. Test your mechanical strength, balance, and design innovation in this epic clash of titans!',
+    imgUrl:'/battle_of_bots.jpeg',
+    Poster: '/battle_of_bots.jpeg',
+    title: 'Battle of Bots',
+    subtitle: 'Design and build a robot capable of pushing, resisting, and dominating opponents in close combat.',
+    description: 'Showcase your bot\'s power, stability, and smart control as it battles for supremacy. Only the most resilient and well-engineered machine will endure and emerge as the ultimate winner!',
+    eventType: 'Team Event',
+    teamSize: '2-5 members',
+    entryFee: '₹400',
+    prizeDetail: '🥇 1st: ₹4000 | 🥈 2nd: ₹2000',
     open:false
-    // pageUrl: '/ProjectExpo'
   },
   {
     id: 'world-4',
-    imgUrl:'/battle_of_bots.jpeg',
-    //imgUrl: '/planet-09.png',
-    Poster: '/battle_of_bots.jpeg',
-    title: 'Battle of Bots',
-    subtitle: 'Robot Soccer is a robot sport, where robot machines compete against each other in a variation of the game of Association Football (soccer). In robot soccer, each team is fully autonomous.',
-    open:false
-    // pageUrl: '/RoboticEvents'
-  },
-
-  {
-    id: 'world-5',
     imgUrl:'/obstacle_smash.jpeg',
-    //imgUrl: '/cover.png',
     Poster: '/obstacle_smash.jpeg',
     title: 'Obstacle Smash',
-    subtitle: 'Guide your autonomous robot through a maze of obstacles! Navigate complex paths, avoid hazards, and demonstrate superior pathfinding algorithms. Speed and accuracy are your keys to victory!',
+    subtitle: 'Build a powerful and rugged robot to conquer a series of obstacles within a limited time.',
+    description: 'This event tests your skills in control, design, and real-time decision-making as your bot navigates challenging terrain.',
+    eventType: 'Team Event',
+    teamSize: '2-5 members',
+    entryFee: '₹400',
+    prizeDetail: '🥇 1st: ₹4000 | 🥈 2nd: ₹2000',
+    open:false
+  },
+  {
+    id: 'world-5',
+    imgUrl:'/path_master.jpeg',
+    Poster: '/path_master.jpeg',
+    title: 'Path Master',
+    subtitle: 'Put your robotics and programming skills to the test, where precision meets speed.',
+    description: 'Design an autonomous line-following robot capable of navigating a track with curves, zigzags, loops, and checkpoints while maintaining accuracy and completing it in the shortest time.',
+    eventType: 'Team Event',
+    teamSize: '2-5 members',
+    entryFee: '₹300',
+    prizeDetail: '🥇 1st: ₹2000 | 🥈 2nd: ₹1000',
     open:false
   },
   {
     id: 'world-6',
-    imgUrl:'/path_master.jpeg',
-    //imgUrl: '/planet-02.png',
-    Poster: '/path_master.jpeg',
-    title: 'Path Master',
-    subtitle: 'Design and program robots that autonomously find optimal paths through complex environments! Demonstrate your programming and problem-solving skills in this challenge of navigation and efficiency!',
+    imgUrl:'/velocity_rush.jpeg',
+    Poster: '/velocity_rush.jpeg',
+    title: 'Velocity Rush',
+    subtitle: 'Experience the thrill of high-speed racing by designing and controlling your own wireless RC car.',
+    description: 'Navigate through a dynamic track with jumps and challenges, testing your car\'s speed, stability, and precision.',
+    eventType: 'Team Event',
+    teamSize: '2-5 members',
+    entryFee: '₹400',
+    prizeDetail: '🥇 1st: ₹4000 | 🥈 2nd: ₹2000',
     open:false
-    // pageUrl: '/InspireAndIgnite'
   },
   {
     id: 'world-7',
-    imgUrl:'/velocity_rush.jpeg',
-    //imgUrl: '/planet-02.png',
-    Poster: '/velocity_rush.jpeg',
-    title: 'Velocity Rush',
-    subtitle: 'Experience high-speed robot races! Engineer and optimize your bot for maximum velocity on challenging circuits. Compete head-to-head in this adrenaline-fueled competition of speed and precision!',
+    imgUrl:'/circuit_hunt.jpeg',
+    Poster: '/circuit_hunt.jpeg',
+    title: 'Circuit Hunt',
+    subtitle: 'Fast-paced, head-to-head competition combining problem-solving and electronics.',
+    description: 'Teams navigate through multiple rooms by solving challenges under fixed time constraint. Winners of each round advance, while others are eliminated. Top teams compete in a surprise final round to claim victory.',
+    eventType: 'Team Event',
+    teamSize: '1-2 members',
+    entryFee: '₹100',
+    prizeDetail: '🥇 1st: ₹1300 | 🥈 2nd: ₹700 | 🥉 3rd: ₹500',
     open:false
-    // pageUrl: '/InspireAndIgnite'
   },
   {
     id: 'world-8',
-    imgUrl: '/circuit_hunt.jpeg',
-    //imgUrl: '/planet13.jpg',
-    Poster: '/circuit_hunt.jpeg',
-    title: 'Circuit Hunt',
-    subtitle: 'Solve complex electronic circuit challenges! Analyze, debug, and optimize circuits under pressure. Test your expertise in circuit design, troubleshooting, and rapid problem-solving!',
-    open:false
-    // pageUrl: '/Poster'
-  },
-  
-  {
-    id: 'world-9',
     imgUrl:'/fox_hunt.jpeg',
-    //imgUrl: '/planet13.jpg',
     Poster: '/fox_hunt.jpeg',
     title: 'Fox Hunt',
-    subtitle: 'Locate hidden radio transmitters using frequency hunting techniques! Adjust your receiver and follow the signal strength as it guides you to the target. A thrilling treasure hunt of RF technology!',
+    subtitle: 'Exciting, fast-paced event focused on signal tracking and strategy.',
+    description: 'Teams use receivers with antennas to search for a hidden transmitter within a limited time. Participants must rely on coordination and direction-finding skills to locate the target. The team that successfully finds the receiver first wins the round.',
+    eventType: 'Team Event',
+    teamSize: '1-2 members',
+    entryFee: '₹50',
+    prizeDetail: 'Victory Prize TBA',
     open:false
-    // pageUrl: '/Poster'
   },
- /* {
-    id: 'world-10',
-    imgUrl:'/poster_codewars.png',
-    //imgUrl: '/planet13.jpg',
-    Poster: '/poster_codewars.png',
-    title: 'Codewars',
-    subtitle: 'The pong game is the two-dimensional game that simulates table tennis kind of competition.It consists of a ball bouncing on a screen and each of the players is provided with slider to hit the ball.The position of slider is adjusted using a knob which will be provided at the either sides of the screen.',
+  {
+    id: 'world-9',
+    imgUrl: '/paper_main.png',
+    Poster: '/paper.jpeg',
+    title: 'Paper Presentation',
+    subtitle: 'Required to prepare and present a technical topic using a presentation.',
+    description: 'Each presentation will be followed by a short Q&A session where participants must justify and explain their work. The event focuses on both the quality of content and the effectiveness of delivery.',
+    eventType: 'Team Event',
+    teamSize: '1-2 members',
+    entryFee: '₹100',
+    prizeDetail: '🥇 1st: ₹1300 | 🥈 2nd: ₹700 | 🥉 3rd: ₹500',
     open:false
-    // pageUrl: '/Poster'
-  },*/
+  },
+  {
+    id: 'world-10',
+    imgUrl: '/poster_main.png',
+    Poster: '/poster.jpeg',
+    title: 'Poster Presentation',
+    subtitle: 'Required to design and present a poster on a chosen topic.',
+    description: 'The focus is on clear visual communication, effective use of design, and the ability to convey the idea concisely. Participants must explain their poster to the judges and answer questions based on their concept.',
+    eventType: 'Team Event',
+    teamSize: '1-2 members',
+    entryFee: '₹100',
+    prizeDetail: '🥇 1st: ₹1300 | 🥈 2nd: ₹700 | 🥉 3rd: ₹500',
+    open:false
+  },
+  {
+    id: 'world-11',
+    imgUrl: '/project_expo_main.png',
+    Poster: '/project_expo.jpeg',
+    title: 'Project Expo',
+    subtitle: 'Required to present a working project or prototype with explanation.',
+    description: 'Teams must demonstrate their project to the judges and explain its applications, advantages, and technical aspects. A Q&A session will follow to assess the depth of understanding.',
+    eventType: 'Team Event',
+    teamSize: '1-2 members',
+    entryFee: '₹100',
+    prizeDetail: '🥇 1st: ₹1500 | 🥈 2nd: ₹1000 | 🥉 3rd: ₹500',
+    open:false
+  },
 ];
 
 export const exploreWorlds5 = [
   {
     id: 'world-1',
-    imgUrl: '/friendship_meter2.jpeg',
-    Poster: '/friendship_meter2.jpeg',
-    title: 'Friendship Meter',
-    subtitle: 'Test your friendship bonds with hilarious challenges and mind games! Discover how well you truly know each other and measure your friendship like never before.',
-    open: false
-  },
-  {
-    id: 'world-2',
-    imgUrl: '/bullseye_blitz.jpeg',
-    Poster: '/bullseye_blitz.jpeg',
-    title: 'Bullseye Blitz',
-    subtitle: 'Test your precision and aim in this thrilling archery competition! Win exciting prizes as you hit the bullseye and prove you\'re the ultimate marksman.',
-    open: false
-  },
-  {
-    id: 'world-3',
-    imgUrl: '/Wheel of glory.png',
-    Poster: '/Wheel of glory.png',
-    title: 'Wheel of Glory',
-    subtitle: 'Spin the wheel of fortune and take on daring challenges with your friends! 50% luck, 50% chaos – can you handle whatever fate throws your way?',
-    open: false
-  },
-  {
-    id: 'world-4',
-    imgUrl: '/whispering game.png',
-    Poster: '/whispering game.png',
-    title: 'Whispering Game',
-    subtitle: 'Pass the message through the chain and see how it transforms hilariously! A game of whisper and guess that\'ll have everyone laughing at the twisted results.',
-    open: false
-  },
-  {
-    id: 'world-5',
-    imgUrl: '/blind_guessing2.jpeg',
-    Poster: '/blind_guessing2.jpeg',
-    title: 'Blind Guessing',
-    subtitle: 'Challenge your intuition by identifying mysterious items through touch alone! Can you guess what\'s in the box with your eyes covered?',
-    open: false
-  },
-  {
-    id: 'world-6',
-    imgUrl: '/paper_plane2.jpeg',
-    Poster: '/paper_plane2.jpeg',
-    title: 'Paper Plane',
-    subtitle: 'Fold, design, and launch your way to victory in this classic competition! Whose paper plane will soar the farthest – grab your paper and compete!',
-    open: false
-  },
-  {
-    id: 'world-7',
     imgUrl: '/escape room.png',
     Poster: '/escape room.png',
     title: 'Escape Room',
-    subtitle: 'Unlock puzzles, solve riddles, and race against time to break free from the mystery room! Can you uncover all the secrets before time runs out?',
-    open: false
+    subtitle: 'Unlock puzzles, solve riddles, and race against time to break free from the mystery room!',
+    description: 'Step into a mysterious room where nothing is as simple as it seems. Hidden clues, subtle details, and untold stories await those who observe closely. Work together, think differently, and piece together fragments of a story that slowly reveals itself. Every discovery brings you closer, but not everything is obvious at first glance.',
+    eventType: 'Group Event',
+    teamSize: '3 members',
+    highlights: ['Mystery & Puzzle-Based Experience', 'Time-Limited Challenge', 'Teamwork & Observation Focused'],
+    entryFee: '₹60'
+  },
+  {
+    id: 'world-2',
+    imgUrl: '/heister_treasure.png',
+    Poster: '/heister_treasure.png',
+    title: 'Heister',
+    subtitle: 'Follow cryptic clues to uncover hidden treasure and complete daring challenges!',
+    description: 'Steal priceless ancient artifacts and archaeological treasures in a high-stakes mission where every second matters. You have just 15 minutes—one shot to change your fate. Plan, execute, and escape before time runs out.',
+    eventType: 'Team Event',
+    teamSize: '3–4 members',
+    highlights: ['Strategy & Time-Based Challenge', 'Limited Time: 15 Minutes', 'Successful heist within time wins'],
+    entryFee: '₹60'
+  },
+  {
+    id: 'world-3',
+    imgUrl: '/MirrorMaze.png',
+    Poster: '/MirrorMaze.png',
+    title: 'Mirror Maze RC Car',
+    subtitle: 'Navigate a mind-bending mirror maze with a camera-equipped RC car!',
+    description: 'Control an RC car through a mirror maze where reflections confuse direction and distance. Players must rely on observation and control to navigate successfully.',
+    eventType: 'Solo Event',
+    teamSize: '1 member',
+    highlights: ['Control & Precision-Based Game', 'Limited Attempts', 'Fastest and most accurate completion wins'],
+    entryFee: '₹50'
+  },
+  {
+    id: 'world-4',
+    imgUrl: '/relay_race.png',
+    Poster: '/relay_race.png',
+    title: 'Relay Race',
+    subtitle: 'Experience heart-pounding team relay races with hilarious mini-games and challenges!',
+    description: 'Relay Race of Mini Games is a team event where groups of 4 participants compete in a series of fun, quick and small challenges. Each member completes a mini-task and passes the baton to the next teammate, testing coordination, speed, and teamwork. The team that successfully completes all challenges in the shortest time emerges as the winner.',
+    eventType: 'Team Event',
+    teamSize: '4 members',
+    highlights: ['Speed with accuracy wins', 'Series of mini-challenges', 'Coordination & teamwork focused'],
+    entryFee: '₹50'
+  },
+  {
+    id: 'world-5',
+    imgUrl: '/liars Deck.png',
+    Poster: '/liars Deck.png',
+    title: 'Liars Deck',
+    subtitle: 'Bluff your way to victory in this thrilling card game of deception and strategy!',
+    description: 'Liars Deck is an exciting bluff-based card game where players use strategy, deception, and observation to outplay opponents. Players claim cards honestly or dishonestly, while others decide whether to trust or challenge them. Deck includes Kings, Queens, Aces, and a Joker. Each player gets 5 cards and players place cards and declare them (can be truth or bluff). Opponents can challenge the claim; wrong claim or wrong challenge leads to elimination.',
+    eventType: 'Group Event',
+    teamSize: '4 members',
+    highlights: ['Bluffing & Strategy-Based', 'Multiple Rounds', 'Challenge, survive, and outlast opponents'],
+    entryFee: '₹50'
+  },
+  {
+    id: 'world-6',
+    imgUrl: '/friendship_meter2.jpeg',
+    Poster: '/friendship_meter2.jpeg',
+    title: 'Friendship Meter',
+    subtitle: 'Test your friendship bonds with hilarious challenges and mind games!',
+    description: 'Test how well you really know your friend. Pairs answer fun personal and compatibility questions about each other. Matching answers earn points, and the pair with the highest compatibility score wins.',
+    eventType: 'Team Event',
+    teamSize: '2-5 members',
+    highlights: ['Compatibility-based scoring', 'Personal & fun questions', 'Highest compatibility score wins'],
+    entryFee: '₹50'
+  },
+  {
+    id: 'world-7',
+    imgUrl: '/snakeandlader.jpeg',
+    Poster: '/snakeandlader.jpeg',
+    title: 'Snakes & Ladders',
+    subtitle: 'Experience the board game at a massive, playable scale with friends!',
+    description: 'Step into a life-size Snake & Ladders game where you become the game piece. Move across a giant board based on dice rolls, climb ladders, slide down snakes, and complete fun mini-challenges on special squares. Reach the final square first to win.',
+    eventType: 'Solo Event',
+    teamSize: '1 member',
+    highlights: ['Luck + Challenges', 'Life-size gameplay', 'First to finish wins'],
+    entryFee: '₹40'
   },
   {
     id: 'world-8',
     imgUrl: '/giant_jenga2.jpeg',
     Poster: '/giant_jenga2.jpeg',
     title: 'Giant Jenga',
-    subtitle: 'Pull blocks and balance towers in this oversized twist on a classic! Add hilarious dares to each move and challenge your friends not to make it tumble.',
-    open: false
+    subtitle: 'Pull blocks and balance towers in this oversized twist on a classic!',
+    description: 'Compete in teams to dismantle and rebuild a giant Jenga tower without making it collapse. Teams take turns, with one member playing each turn. If the tower falls during your team\'s move, the entire team must perform a fun dare assigned by the organizers. The game continues until only one team remains.',
+    eventType: 'Team Event',
+    teamSize: '2-3 members',
+    highlights: ['Team Dare Penalty on Collapse', 'Tower balance challenge', 'Last remaining team wins'],
+    entryFee: '₹40'
   },
   {
     id: 'world-9',
-    imgUrl: '/snakeandlader.jpeg',
-    Poster: '/snakeandlader.jpeg',
-    title: 'Snakes & Ladders',
-    subtitle: 'Experience the board game at a massive, playable scale with friends! Roll the dice, race to the finish, and encounter unexpected snakes and thrilling ladders.',
-    open: false
+    imgUrl: '/bullseye_blitz.jpeg',
+    Poster: '/bullseye_blitz.jpeg',
+    title: 'Bullseye Blitz',
+    subtitle: 'Test your precision and aim in this thrilling archery competition!',
+    description: 'Test your aim in this precision archery challenge. Each participant gets 5 arrows (shots) to hit a target board with marked scoring zones. Points are awarded based on accuracy, and the participant with the highest total score wins.',
+    eventType: 'Solo Event',
+    teamSize: '1 member',
+    highlights: ['5 Attempts per Participant', 'Accuracy-Based Scoring', 'Highest total score wins'],
+    entryFee: '₹40'
   },
   {
     id: 'world-10',
-    imgUrl: '/lights camera quiz.png',
-    Poster: '/lights camera quiz.png',
-    title: 'Lights, Camera, Quiz!',
-    subtitle: 'Guess the movie, identify the dialogue, and test your film knowledge! A thrilling quiz powered by movies, music, and unforgettable moments.',
-    open: false
+    imgUrl: '/Wheel of glory.png',
+    Poster: '/Wheel of glory.png',
+    title: 'Wheel of Glory',
+    subtitle: 'Spin the wheel of fortune and take on daring challenges with your friends!',
+    description: 'Spin the wheel and face whatever it decides—fun challenges, quick tasks, or bonus rewards. Participants must complete the task indicated by the wheel to earn points. The highest total score after the allotted spins wins.',
+    eventType: 'Solo Event',
+    teamSize: '1 member',
+    highlights: ['3 spins per participant', 'Random challenges & rewards', '50% luck, 50% chaos'],
+    entryFee: '₹30'
   },
   {
     id: 'world-11',
-    imgUrl: '/liars Deck.png',
-    Poster: '/liars Deck.png',
-    title: 'Liars Deck',
-    subtitle: 'Bluff your way to victory in this thrilling card game of deception and strategy! Can you spot the liars or will you fall for their clever tricks?',
-    open: false
+    imgUrl: '/whispering game.png',
+    Poster: '/whispering game.png',
+    title: 'Whispering Game',
+    subtitle: 'Pass the message through the chain and see how it transforms hilariously!',
+    description: 'Whispering Game is a fun and interactive challenge where one participant listens to loud music through headphones while their partner communicates a word or phrase using only lip movements and gestures. The goal is to guess correctly within a set time.',
+    eventType: 'Team Event',
+    teamSize: '2 members',
+    highlights: ['Communication-Based Game', 'Time-Limited Rounds', 'Maximum correct guesses wins'],
+    entryFee: '₹30'
   },
   {
     id: 'world-12',
-    imgUrl: '/MirrorMaze.png',
-    Poster: '/MirrorMaze.png',
-    title: 'Mirror Maze RC Car',
-    subtitle: 'Navigate a mind-bending mirror maze with a camera-equipped RC car! Guide your vehicle through reflections and illusions to escape the ultimate visual challenge.',
-    open: false
+    imgUrl: '/blind_guessing2.jpeg',
+    Poster: '/blind_guessing2.jpeg',
+    title: 'Blind Guessing',
+    subtitle: 'Challenge your intuition by identifying mysterious items through touch alone!',
+    description: 'Blind Guessing Challenge is a sensory-based game where one participant picks a chit describing an object, while their blindfolded partner must identify that object using only their sense of touch.',
+    eventType: 'Team Event',
+    teamSize: '2 members',
+    highlights: ['Sensory & Fun-Based Game', 'Time-Limited Rounds', 'Maximum correct guesses wins'],
+    entryFee: '₹30'
   },
   {
     id: 'world-13',
-    imgUrl: '/heister_treasure.png',
-    Poster: '/heister_treasure.png',
-    title: 'Heister',
-    subtitle: 'Follow cryptic clues to uncover hidden treasure and complete daring challenges! Test your detective skills and strategic thinking in this thrilling treasure hunt adventure.',
-    open: false
+    imgUrl: '/paper_plane2.jpeg',
+    Poster: '/paper_plane2.jpeg',
+    title: 'Paper Plane',
+    subtitle: 'Fold, design, and launch your way to victory in this classic competition!',
+    description: 'Paper Plane Challenge is a creative and engaging event where participants design and launch their own paper planes. Participants come up with unique and scientifically stable designs where performance is judged based on flight distance, airtime, and accuracy, encouraging both innovation and precision.',
+    eventType: 'Solo Event',
+    teamSize: '1 member',
+    highlights: ['Creative & Skill-Based', 'Limited Attempts', 'Best overall flight performance wins'],
+    entryFee: '₹30'
   },
   {
     id: 'world-14',
     imgUrl: '/human_akinator_real.png',
     Poster: '/human_akinator_real.png',
     title: 'Human Akinator',
-    subtitle: 'Can you guess the mystery person before they guess you with clever questions? A mind-bending game of deduction where intuition and psychology collide!',
-    open: false
+    subtitle: 'Can you guess the mystery person before they guess you with clever questions?',
+    description: 'Think of a person and let others guess who it is. Players act as the "Akinator," asking yes/no questions to identify the chosen character. It\'s a fun test of logic, questioning skills, and quick thinking.',
+    eventType: 'Group Event',
+    teamSize: '2-4 members',
+    highlights: ['Question-Based Guessing Game', 'Limited Questions per Round', 'Correct guess within minimum questions wins'],
+    entryFee: '₹30'
   },
   {
     id: 'world-15',
-    imgUrl: '/relay_race.png',
-    Poster: '/relay_race.png',
-    title: 'Relay Race',
-    subtitle: 'Experience heart-pounding team relay races with hilarious mini-games and challenges! Teamwork, speed, and unforgettable moments await in this action-packed competition.',
-    open: false
+    imgUrl: '/lights camera quiz.png',
+    Poster: '/lights camera quiz.png',
+    title: 'Lights, Camera, Quiz!',
+    subtitle: 'Guess the movie, identify the dialogue, and test your film knowledge!',
+    description: 'Dive into this exciting movie-based quiz that tests your film knowledge across multiple rounds. Participants identify movies from clips and dialogues, and decode reversed or upside-down content. Speed and accuracy are key to scoring points.',
+    eventType: 'Solo Event',
+    teamSize: '1 member',
+    highlights: ['Quiz & Entertainment-Based', 'Multiple Rounds', 'Fastest correct answers score points'],
+    entryFee: '₹50'
   },
 ];
 export const exploreWorlds51 = [];
@@ -293,7 +394,7 @@ export const sponsorsList = [
   },
   {
     id:'sp-3',
-    imgUrl:'/ece_alumini.jpeg',
+    imgUrl:'/alumni_sponsors.jpeg',
     title: 'ECE Alumini',
     url: 'https://www.vcealumni.org/'
   },

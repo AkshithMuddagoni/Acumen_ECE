@@ -124,12 +124,12 @@ const Navbar = ({ exploreRef }) => {
                 <span>LinkedIn</span>
               </a>
               <a
-                href="https://www.instagram.com/acumen_ece"
+                href="https://www.instagram.com/acumen.ece?igsh=OHVpNWdtMGlpbmtw"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 px-4 py-3 text-white hover:bg-[#00ffaa]/20 transition-colors font-medium"
               >
-                <span className="text-lg">📸</span>
+                <img src="/instagram.png" alt="Instagram" className="w-6 h-6" />
                 <span>Instagram</span>
               </a>
             </div>
@@ -207,12 +207,12 @@ const Navbar = ({ exploreRef }) => {
             <span>LinkedIn</span>
           </a>
           <a
-            href="https://www.instagram.com/acumen_ece"
+            href="https://www.instagram.com/acumen.ece?igsh=OHVpNWdtMGlpbmtw"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 px-4 py-3 text-white hover:bg-[#00ffaa]/10 transition-colors font-medium"
           >
-            <span className="text-lg">📸</span>
+            <img src="/instagram.png" alt="Instagram" className="w-6 h-6" />
             <span>Instagram</span>
           </a>
         </div>

@@ -32,16 +32,17 @@ const World = () => (
       >
         <img src="/map.png" alt="map" className="w-full h-full object-cover" />
 
-        <div className="absolute bottom-20 right-20 w-[70px] h-[70px] p-[6px] rounded-full bg-[#5D6680]">
-          <img src="people-01.png" alt="people" className="w-full h-full" />
+        {/* User Avatar Indicators */}
+        <div className="absolute bottom-20 right-20 w-[70px] h-[70px] rounded-full bg-gradient-to-br from-[#5D6680] to-[#3d3f4a] flex items-center justify-center shadow-lg border-2 border-[#00ffaa]/30 hover:border-[#00ffaa] transition-colors cursor-pointer hover:scale-110">
+          <span className="text-white text-2xl">👤</span>
         </div>
 
-        <div className="absolute top-10 left-20 w-[70px] h-[70px] p-[6px] rounded-full bg-[#5D6680]">
-          <img src="/people-02.png" alt="people" className="w-full h-full" />
+        <div className="absolute top-10 left-20 w-[70px] h-[70px] rounded-full bg-gradient-to-br from-[#5D6680] to-[#3d3f4a] flex items-center justify-center shadow-lg border-2 border-[#00ffaa]/30 hover:border-[#00ffaa] transition-colors cursor-pointer hover:scale-110">
+          <span className="text-white text-2xl">👤</span>
         </div>
 
-        <div className="absolute top-1/2 left-[45%] w-[70px] h-[70px] p-[6px] rounded-full bg-[#5D6680]">
-          <img src="people-03.png" alt="people" className="w-full h-full" />
+        <div className="absolute top-1/2 left-[45%] w-[70px] h-[70px] rounded-full bg-gradient-to-br from-[#5D6680] to-[#3d3f4a] flex items-center justify-center shadow-lg border-2 border-[#00ffaa]/30 hover:border-[#00ffaa] transition-colors cursor-pointer hover:scale-110">
+          <span className="text-white text-2xl">👤</span>
         </div>
       </motion.div>
     </motion.div>

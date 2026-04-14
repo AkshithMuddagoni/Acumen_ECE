@@ -1,4 +1,4 @@
-import { Footer, Navbar, Navbar_Prim } from '../components';
+import { Navbar, Navbar_Prim } from '../components';
 import { Hero4, TechEventsGallery, GetStarted4 } from '../sections';
 import React from 'react'
 
@@ -12,7 +12,6 @@ const RoboticEvents = () => {
         <div className="gradient-07 z-0" />
         <TechEventsGallery />
       </div>
-      <Footer />
     </div>
   );
 }

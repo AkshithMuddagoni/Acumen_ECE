@@ -123,7 +123,7 @@ const CircularGalleryTech = React.forwardRef(
                 key={item.id} 
                 role="group"
                 aria-label={item.title}
-                className="absolute w-[176px] h-[224px] sm:w-[208px] sm:h-[256px] md:w-[240px] md:h-[304px]"
+                className="absolute w-[158px] h-[202px] sm:w-[187px] sm:h-[230px] md:w-[216px] md:h-[274px]"
                 style={{
                   transform: `rotateY(${itemAngle}deg) translateZ(${radius}px)`,
                   left: '50%',

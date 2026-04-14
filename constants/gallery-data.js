@@ -85,6 +85,8 @@ export const galleryMediaItems = imageFiles.map((name, i) => ({
   id: `photo-${i}`,
   type: 'image',
   title: name.replace('.webp', '').replace(/^Copy of /, ''),
+  alt: `Gallery image ${i}`,
   desc: 'Event photo',
+  src: `/gallery/${name}`,
   url: `/gallery/${name}`,
 }));

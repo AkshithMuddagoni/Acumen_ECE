@@ -170,10 +170,6 @@ const TechEventsGallery = () => {
                       <span className="text-[#00ffaa] font-semibold block mb-1">📍 Venue</span>
                       <span>ECE Block</span>
                     </div>
-                    <div>
-                      <span className="text-[#00ffaa] font-semibold block mb-1">👥 Team Size</span>
-                      <span>2-4 members</span>
-                    </div>
                   </div>
                 </motion.div>
 
@@ -191,7 +187,7 @@ const TechEventsGallery = () => {
                     Register →
                   </button>
                   <button
-                    onClick={() => window.open('https://drive.google.com/drive/folders/1B8K9-tgUVZJ0cbEDnvin5yQrt14fyni_', '_blank')}
+                    onClick={() => window.open('https://drive.google.com/drive/folders/12iEAt-7cRzJRDZAR_7x83Ku2ZhQRwTfS', '_blank')}
                     className="flex-1 py-3 sm:py-4 px-6 rounded-xl bg-gradient-to-r from-[#6366f1] to-[#4f46e5] text-white font-black text-base sm:text-lg hover:shadow-[0_0_40px_rgba(99,102,241,0.8)] transition-all transform hover:scale-105 active:scale-95"
                   >
                     📋 Rule Book

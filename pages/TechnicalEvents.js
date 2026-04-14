@@ -1,4 +1,4 @@
-import { Footer, Navbar, Navbar_Prim } from '../components';
+import { Navbar, Navbar_Prim } from '../components';
 import { About5, Explore5, Feedback, GetStarted5, Hero5 } from '../sections';
 import React from 'react'
 
@@ -68,7 +68,6 @@ const TechnicalEvents = () => {
       <Feedback />
       <div className="gradient-04 z-0" />
     </div> */}
-    <Footer />
   </div>
 );
 }
